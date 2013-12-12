@@ -6,8 +6,8 @@ def check(st_reg_number, state_index):
         This function is like a Facade to another modules that
         makes their own state validation.
 
-        st_reg_number - brazilian state registration number
-        state_index  - index that references the state
+        st_reg_number - string brazilian state registration number
+        state_index  - integer index that references the state
 
         1 => AC (Acre)
         2 => AL (Alagoas)
@@ -39,7 +39,7 @@ def check(st_reg_number, state_index):
     """  
 
     states_validations = {
-        1:"ac.check(" + str(st_reg_number) + ")"
+        1:"ac.check("+ "\"" + st_reg_number + "\"" + ")"
     }
 
     exec('validity = ' + states_validations[state_index])
