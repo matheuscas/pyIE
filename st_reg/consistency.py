@@ -40,6 +40,7 @@ def check(st_reg_number, state_index):
 
     states_validations = {
         1:"ac.check("+ "\"" + st_reg_number + "\"" + ")"
+	2:"al.check("+ "\"" + st_reg_number + "\"" + ")"
     }
 
     exec('validity = ' + states_validations[state_index])
