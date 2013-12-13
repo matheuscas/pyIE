@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import states.ac as ac
+import states.al as al
 
 def check(st_reg_number, state_index):
     """
