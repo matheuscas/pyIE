@@ -5,7 +5,7 @@ Consistency validation of brazilian state registration numbers.
 
 **Work in progress**
 
-[![Build Status](https://travis-ci.org/[matheuscas]/[br-state_registration].png)](https://travis-ci.org/[matheuscas]/[br-state_registration])
+[![Build Status](https://travis-ci.org/matheuscas/br-state_registration.png?branch=master)](https://travis-ci.org/matheuscas/br-state_registration)
 
 How to use it:
 --------------
