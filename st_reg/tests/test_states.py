@@ -7,6 +7,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 
 import st_reg.states.ac as ac
 import st_reg.states.al as al
+import st_reg.states.am as am
 
 #ACRE
 def test_ac_validation_right_size_invalid_number():
@@ -65,3 +66,20 @@ def test_al_validation_digit_verification():
     invalid_number = '240071779'
     assert al.check(invalid_number) == False
 
+#AMAZONAS
+
+def test_am_validation_rigth_size_invalid_number():
+    invalid_number = '999999999'
+    assert am.check(invalid_number) == False
+
+def test_am_validation_rigth_size_valid_number():
+    invalid_number = '100000010'
+    assert am.check(invalid_number) == True
+
+def test_am_validation_big_size_number():
+    invalid_number = '9999999999'
+    assert am.check(invalid_number) == False
+
+def test_am_validation_small_size_number():
+    invalid_number ='99999999'
+    assert am.check(invalid_number) == False
