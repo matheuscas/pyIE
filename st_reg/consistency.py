@@ -4,15 +4,15 @@ import states.al as al
 import states.am as am
 import states.ap as ap
 import states.ba as ba
-#import states.ce as ce
+import states.ce as ce
 #import states.df as df
-#import states.es as es
+import states.es as es
 #import states.go as go
-#import states.ma as ma
+import states.ma as ma
 #import states.mt as mt
-#import states.ms as ms
+import states.ms as ms
 #import states.mg as mg
-#import states.pa as pa
+import states.pa as pa
 #import states.pb as pb
 #import states.pr as pr
 #import states.pi as pi
@@ -26,6 +26,7 @@ import states.ba as ba
 #import states.sp as sp
 #import states.se as se
 #import states.to as to
+
 
 def check(st_reg_number, state_index):
     """
@@ -70,6 +71,15 @@ def check(st_reg_number, state_index):
         3:"am.check("+ "\"" + st_reg_number + "\"" + ")",
         4:"ap.check("+ "\"" + st_reg_number + "\"" + ")",
         5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
+        6:"ce.check("+ "\"" + st_reg_number + "\"" + ")",
+        8:"es.check("+ "\"" + st_reg_number + "\"" + ")",
+        #GO
+        10:"ma.check("+ "\"" + st_reg_number + "\"" + ")",
+        #MG
+        12:"ms.check("+ "\"" + st_reg_number + "\"" + ")",
+        #MT
+        14:"pa.check("+ "\"" + st_reg_number + "\"" + ")"
+
     }
 
     exec('validity = ' + states_validations[state_index])
