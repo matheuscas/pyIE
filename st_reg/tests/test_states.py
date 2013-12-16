@@ -9,6 +9,7 @@ import st_reg.states.ac as ac
 import st_reg.states.al as al
 import st_reg.states.am as am
 import st_reg.states.ap as ap
+#import st_reg.states.ce as ce
 
 #ACRE
 def test_ac_validation_right_size_invalid_number():
@@ -109,6 +110,11 @@ def test_ap_validation_start_different_03():
 def test_ap_validation_digit_verification():
     """Test if a invalid digit verification"""
 
-    invalid_number = '240071779'
+    invalid_number = '030123456'
     assert ap.check(invalid_number) == False
 
+def test_ap_validation():
+    """Test if valid number"""
+
+    valid_number = '030123459'
+    assert ap.check(valid_number)

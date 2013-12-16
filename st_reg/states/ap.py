@@ -1,5 +1,6 @@
 # *-* coding:utf-8 *-*
 def check (st_reg_number):
+
 	DIVISOR = 11
 	if len(st_reg_number)>9:
 		return False
@@ -10,8 +11,8 @@ def check (st_reg_number):
 	if st_reg_number[0:2] != "03":
 		return False
 	
-	aux = int(st_reg_number[0:len(st_reg_number)-2])
-	
+	aux = int(st_reg_number[0:len(st_reg_number)-1])
+		
 	if 3000000 < aux and aux < 3017001:
 		p = 5
 		d = 0
@@ -23,11 +24,12 @@ def check (st_reg_number):
 	if aux > 3019022:
 		p = 0
 		d = 0
-
+	
 	sum = 0
+	peso = 9
     	for i in range(len(st_reg_number)-1):
-        	sum = sum + int(st_reg_number[i]) * aux
-		aux -= 1
+		sum = sum + int(st_reg_number[i]) * peso
+		peso = peso -1
 	sum += p
 
     	rest_division = sum % DIVISOR

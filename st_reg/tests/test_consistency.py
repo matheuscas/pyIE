@@ -23,6 +23,6 @@ def test_amazonas_call():
     assert con.check(valid_number, amazonas_index)
 
 def test_amapa_call():
-    valid_number = '240071779'
+    invalid_number = '172030964'
     amapa_index = 4
-    assert con.check(valid_number, amapa_index)  
+    assert con.check(invalid_number, amapa_index) == False
