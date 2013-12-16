@@ -9,6 +9,7 @@ import states.ma as ma
 import states.ms as ms
 import states.pa as pa
 import states.pe as pe
+import states.pr as pr
 
 def check(st_reg_number, state_index):
     """
@@ -57,7 +58,8 @@ def check(st_reg_number, state_index):
 	10:"ma.check("+ "\"" + st_reg_number + "\"" + ")",
 	12:"ms.check("+ "\"" + st_reg_number + "\"" + ")",
 	14:"pa.check("+ "\"" + st_reg_number + "\"" + ")",
-	16:"pe.check("+ "\"" + st_reg_number + "\"" + ")"
+	16:"pe.check("+ "\"" + st_reg_number + "\"" + ")",
+	18:"pr.check("+ "\"" + st_reg_number + "\"" + ")"
     }
 
     exec('validity = ' + states_validations[state_index])
