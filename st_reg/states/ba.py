@@ -18,8 +18,10 @@ def check(st_reg_number):
 
 			sum_second_digit = sum_second_digit + i*int(st_reg_number[-i-1])
 	
-		second_digits_check = 10 - (sum_second_digit % 10) 
-						
+		second_digits_check = 10 - (sum_second_digit % 10)
+
+		if sum_second_digit % 10 == 0 or sum_second_digit % 11 == 1:
+			second_digits_check = '0'
 		if str(second_digits_check) !=second_digits:
 
 			return False
@@ -27,9 +29,14 @@ def check(st_reg_number):
 		digit_two = number_state_registration + str(second_digits_check)
 
 		for i in weights_first_digit:
+
 			sum_first_digit = sum_first_digit + i*int(digit_two[-i+1])
 
 		first_digits_check = 10 - (sum_first_digit % 10)
+
+		if sum_first_digit % 10 == 0 or sum_first_digit % 10 == 1:
+			first_digits_check = '0'
+
 
 		return str(first_digits_check) + str(second_digits_check) == digits_state_registration
 
@@ -40,7 +47,10 @@ def check(st_reg_number):
 			sum_second_digit = sum_second_digit + i*int(st_reg_number[-i-1])
 	
 		second_digits_check = 11 - (sum_second_digit % 11) 
-						
+
+		if sum_second_digit % 11 == 0 or sum_second_digit % 11 == 1:
+			second_digits_check = '0'
+				
 		if str(second_digits_check) !=second_digits:
 
 			return False
@@ -48,10 +58,14 @@ def check(st_reg_number):
 		digit_two = number_state_registration + str(second_digits_check)
 
 		for i in weights_first_digit:
-			sum_first_digit = sum_first_digit + i*int(digit_two[-i+1])
 
+			sum_first_digit = sum_first_digit + i*int(digit_two[-i+1])
+			print sum_first_digit
 		first_digits_check = 11 - (sum_first_digit % 11)
-			
+
+		if sum_first_digit % 11 == 0 or sum_first_digit % 11 == 1:
+			first_digits_check = '0'
+
 		return str(first_digits_check) + str(second_digits_check) == digits_state_registration
 
 	

@@ -160,7 +160,8 @@ def test_ba_validation_right_size_invalid_number_8_digits_and_second_digit_diffe
 def test_ba_validation_right_size_valid_number_8_digits_and_second_digit_different_6_7_9():
     """Test if a valid number is really valid with 8 digits"""
 
-    valid_number = '12345663'
+    valid_number = '74694200'
+    print ba.check(valid_number)
     assert ba.check(valid_number) == True
 
 def test_ba_validation_right_size_invalid_number_8_digits_and_second_digit_equal_6_7_9():
