@@ -26,3 +26,8 @@ def test_amapa_call():
     invalid_number = '172030964'
     amapa_index = 4
     assert con.check(invalid_number, amapa_index) == False
+
+def test_ceara_call():
+    invalid_number = '60000013'
+    ceara_index = 6
+    assert con.check(invalid_number, ceara_index) == False
