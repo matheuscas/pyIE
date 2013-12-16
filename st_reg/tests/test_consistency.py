@@ -46,3 +46,8 @@ def test_mato_grosso_do_sul_call():
     invalid_number = '280000009'
     mato_grosso_do_sul_index = 12
     assert con.check(invalid_number, mato_grosso_do_sul_index) == False
+
+def test_para_call():
+    invalid_number = '159999999'
+    para_index = 12
+    assert con.check(invalid_number, para_index) == False
