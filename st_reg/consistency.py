@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import states.ac as ac
 import states.al as al
+import states.ap as ap
 
 def check(st_reg_number, state_index):
     """
@@ -42,6 +43,7 @@ def check(st_reg_number, state_index):
     states_validations = {
         1:"ac.check("+ "\"" + st_reg_number + "\"" + ")"
 	2:"al.check("+ "\"" + st_reg_number + "\"" + ")"
+	3:"ap.check("+ "\"" + st_reg_number + "\"" + ")"
     }
 
     exec('validity = ' + states_validations[state_index])

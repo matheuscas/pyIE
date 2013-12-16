@@ -7,6 +7,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 
 import st_reg.states.ac as ac
 import st_reg.states.al as al
+import st_reg.states.ap as ap
 
 #ACRE
 def test_ac_validation_right_size_invalid_number():
@@ -45,7 +46,7 @@ def test_al_validation_small_size_number():
     """Test if a invalid number, with wrong size, is really invalid"""
 
     invalid_number = '0172030'
-    assert ac.check(invalid_number) == False
+    assert al.check(invalid_number) == False
 
 def test_al_validation_start_different_24():
     """Test if a invalid number start is different 24"""
@@ -65,3 +66,29 @@ def test_al_validation_digit_verification():
     invalid_number = '240071779'
     assert al.check(invalid_number) == False
 
+#AMAPÁ
+
+def test_ap_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '1720309645'
+    assert ap.check(invalid_number) == False
+
+def test_ap_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '0172030'
+    assert ap.check(invalid_number) == False
+
+def test_ap_validation_start_different_03():
+    """Test if a invalid number start is different 03"""
+
+    invalid_number = '172030964'
+    assert ap.check(invalid_number) == False
+
+
+def test_ap_validation_digit_verification():
+    """Test if a invalid digit verification"""
+
+    invalid_number = '240071779'
+    assert ap.check(invalid_number) == False
