@@ -51,3 +51,8 @@ def test_para_call():
     invalid_number = '159999999'
     para_index = 12
     assert con.check(invalid_number, para_index) == False
+
+def test_pernambuco_call():
+    invalid_number = '032141833'
+    pernambuco_index = 14
+    assert con.check(invalid_number, pernambuco_index) == False

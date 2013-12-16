@@ -14,6 +14,7 @@ import st_reg.states.es as es
 import st_reg.states.ma as ma
 import st_reg.states.ms as ms
 import st_reg.states.pa as pa
+import st_reg.states.pe as pe
 
 #ACRE
 def test_ac_validation_right_size_invalid_number():
@@ -239,7 +240,6 @@ def test_ms_validation():
     valid_number = '280000006'
     assert ms.check(valid_number)
 
-
 #PARA
 
 def test_pa_validation_right_size_invalid_number():
@@ -272,3 +272,28 @@ def test_pa_validation():
     valid_number = '159999995'
     assert pa.check(valid_number)
 
+#PERNAMBUCO
+
+def test_pe_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '1520309645'
+    assert pe.check(invalid_number) == False
+
+def test_pe_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '1572030'
+    assert pe.check(invalid_number) == False
+
+def test_pe_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '032141830'
+    assert pe.check(invalid_number) == False
+
+def test_pe_validation():
+    """Test if valid number"""
+
+    valid_number = '032141840'
+    assert pe.check(valid_number)
