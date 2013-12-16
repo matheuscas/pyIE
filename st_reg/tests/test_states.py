@@ -147,6 +147,13 @@ def test_ap_validation_digit_verification():
     invalid_number = '030123456'
     assert ap.check(invalid_number) == False
 
+def test_ap_validation():
+    """Test if valid number"""
+
+    valid_number = '030123459'
+    assert ap.check(valid_number)
+
+
 
 
 #BAHIA
@@ -213,11 +220,6 @@ def test_ba_validation_big_size_number():
     invalid_number = '0030964575'
     assert ba.check(invalid_number) == False
 
-def test_ap_validation():
-    """Test if valid number"""
-
-    valid_number = '030123459'
-    assert ap.check(valid_number)
 
 #CEARÁ
 
@@ -394,3 +396,6 @@ def test_pe_validation():
     valid_number = '032141840'
     assert pe.check(valid_number)
 
+# DISTRITO FEDERAL
+
+def test_df_validation
