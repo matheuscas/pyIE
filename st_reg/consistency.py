@@ -3,13 +3,34 @@ import states.ac as ac
 import states.al as al
 import states.am as am
 import states.ap as ap
+import states.ba as ba
 import states.ce as ce
+#import states.df as df
 import states.es as es
+#import states.go as go
 import states.ma as ma
+#import states.mt as mt
 import states.ms as ms
+#import states.mg as mg
 import states.pa as pa
+#import states.pb as pb
 import states.pe as pe
 import states.pr as pr
+
+
+#import states.pi as pi
+#import states.rj as rj
+#import states.rs as rs
+#import states.rn as rn
+#import states.rs as rs
+#import states.ro as ro
+#import states.rr as rr
+#import states.sc as sc
+#import states.sp as sp
+#import states.se as se
+#import states.to as to
+
+
 
 def check(st_reg_number, state_index):
     """
@@ -53,6 +74,7 @@ def check(st_reg_number, state_index):
         2:"al.check("+ "\"" + st_reg_number + "\"" + ")",
         3:"am.check("+ "\"" + st_reg_number + "\"" + ")",
 	4:"ap.check("+ "\"" + st_reg_number + "\"" + ")",
+	5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
 	6:"ce.check("+ "\"" + st_reg_number + "\"" + ")",
 	8:"es.check("+ "\"" + st_reg_number + "\"" + ")",
 	10:"ma.check("+ "\"" + st_reg_number + "\"" + ")",
@@ -60,6 +82,7 @@ def check(st_reg_number, state_index):
 	14:"pa.check("+ "\"" + st_reg_number + "\"" + ")",
 	16:"pe.check("+ "\"" + st_reg_number + "\"" + ")",
 	18:"pr.check("+ "\"" + st_reg_number + "\"" + ")"
+
     }
 
     exec('validity = ' + states_validations[state_index])
