@@ -41,3 +41,8 @@ def test_maranhao_call():
     invalid_number = '120000382'
     maranhao_index = 10
     assert con.check(invalid_number, maranhao_index) == False
+
+def test_mato_grosso_do_sul_call():
+    invalid_number = '280000009'
+    mato_grosso_do_sul_index = 12
+    assert con.check(invalid_number, mato_grosso_do_sul_index) == False

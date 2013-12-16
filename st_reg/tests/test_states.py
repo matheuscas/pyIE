@@ -12,6 +12,7 @@ import st_reg.states.ap as ap
 import st_reg.states.ce as ce
 import st_reg.states.es as es
 import st_reg.states.ma as ma
+import st_reg.states.ms as ms
 
 #ACRE
 def test_ac_validation_right_size_invalid_number():
@@ -187,7 +188,7 @@ def test_ma_validation_small_size_number():
     invalid_number = '1272030'
     assert ma.check(invalid_number) == False
 
-def test_ma_validation_start_different_03():
+def test_ma_validation_start_different_12():
     """Test if a invalid number start is different 12"""
 
     invalid_number = '172030964'
@@ -204,3 +205,37 @@ def test_ma_validation():
 
     valid_number = '120000385'
     assert ma.check(valid_number)
+
+#MATO GROSSO DO SUL
+
+def test_ms_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '2820309645'
+    assert ms.check(invalid_number) == False
+
+def test_ms_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '2872030'
+    assert ms.check(invalid_number) == False
+
+def test_ms_validation_start_different_28():
+    """Test if a invalid number start is different 28"""
+
+    invalid_number = '172030964'
+    assert ms.check(invalid_number) == False
+
+def test_ms_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '280000008'
+    assert ms.check(invalid_number) == False
+
+def test_ms_validation():
+    """Test if valid number"""
+
+    valid_number = '280000006'
+    assert ms.check(valid_number)
+
+
