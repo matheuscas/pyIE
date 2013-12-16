@@ -30,5 +30,4 @@ def check (st_reg_number):
 	return digit == int(st_reg_number[len(st_reg_number)-1])
 		
 	
-	
-print check("240071778")
+

@@ -20,4 +20,17 @@ def test_alagoas_call():
 def test_amazonas_call():
     valid_number = '100000010'
     amazonas_index = 3
-    assert con.check(valid_number, amazonas_index) 
+    assert con.check(valid_number, amazonas_index)
+
+def test_amapa_call():
+    valid_number = '240071779'
+    amapa_index = 4
+    assert con.check(valid_number, amapa_index) 
+
+
+
+
+def test_bahia_call():
+    valid_number = '162345651' 
+    bahia_index = 5
+    assert con.check(valid_number, bahia_index)

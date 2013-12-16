@@ -2,30 +2,31 @@
 import states.ac as ac
 import states.al as al
 import states.am as am
-import st_reg.states.ap as ap
-#import st_reg.states.ba as ba
-#import st_reg.states.ce as ce
-#import st_reg.states.df as df
-#import st_reg.states.es as es
-#import st_reg.states.go as go
-#import st_reg.states.ma as ma
-#import st_reg.states.mt as mt
-#import st_reg.states.ms as ms
-#import st_reg.states.mg as mg
-#import st_reg.states.pa as pa
-#import st_reg.states.pb as pb
-#import st_reg.states.pr as pr
-#import st_reg.states.pi as pi
-#import st_reg.states.rj as rj
-#import st_reg.states.rs as rs
-#import st_reg.states.rn as rn
-#import st_reg.states.rs as rs
-#import st_reg.states.ro as ro
-#import st_reg.states.rr as rr
-#import st_reg.states.sc as sc
-#import st_reg.states.sp as sp
-#import st_reg.states.se as se
-#import st_reg.states.to as to
+import states.ap as ap
+import states.ba as ba
+#import states.ce as ce
+#import states.df as df
+#import states.es as es
+#import states.go as go
+#import states.ma as ma
+#import states.mt as mt
+#import states.ms as ms
+#import states.mg as mg
+#import states.pa as pa
+#import states.pb as pb
+#import states.pr as pr
+#import states.pi as pi
+#import states.rj as rj
+#import states.rs as rs
+#import states.rn as rn
+#import states.rs as rs
+#import states.ro as ro
+#import states.rr as rr
+#import states.sc as sc
+#import states.sp as sp
+#import states.se as se
+#import states.to as to
+
 def check(st_reg_number, state_index):
     """
         This function is like a Facade to another modules that
@@ -66,7 +67,9 @@ def check(st_reg_number, state_index):
     states_validations = {
         1:"ac.check("+ "\"" + st_reg_number + "\"" + ")",
         2:"al.check("+ "\"" + st_reg_number + "\"" + ")",
-        3:"am.check("+ "\"" + st_reg_number + "\"" + ")"
+        3:"am.check("+ "\"" + st_reg_number + "\"" + ")",
+        4:"ap.check("+ "\"" + st_reg_number + "\"" + ")",
+        5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
     }
 
     exec('validity = ' + states_validations[state_index])
