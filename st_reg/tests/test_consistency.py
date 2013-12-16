@@ -25,10 +25,7 @@ def test_amazonas_call():
 def test_amapa_call():
     invalid_number = '172030964'
     amapa_index = 4
-    assert con.check(valid_number, amapa_index) 
-
-
-
+    assert con.check(invalid_number, amapa_index) == False 
 
 def test_bahia_call():
     valid_number = '162345651' 
@@ -61,3 +58,7 @@ def test_para_call():
     para_index = 12
     assert con.check(invalid_number, para_index) == False
 
+def test_pernambuco_call():
+    invalid_number = '032141833'
+    pernambuco_index = 14
+    assert con.check(invalid_number, pernambuco_index) == False
