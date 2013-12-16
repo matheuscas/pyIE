@@ -41,13 +41,12 @@ def check (st_reg_number):
 		peso = peso - 1
 	
 	rest_division = sum % DIVISOR
-    	digit_secund = DIVISOR - rest_division	
-	
+    	
 	if rest_division < 2:
 		digit_secund = 0
 
 	if rest_division > 1:
-		digit_secund = 11 - rest_division
+		digit_secund = DIVISOR - rest_division
 
 	if digit_secund == int(st_reg_number[len(st_reg_number)-1]) and digit_first == int(st_reg_number[len(st_reg_number)-2]):
 		return True
