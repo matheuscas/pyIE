@@ -178,13 +178,19 @@ def test_es_validation():
 def test_ma_validation_right_size_invalid_number():
     """Test if a invalid number is really invalid"""
 
-    invalid_number = '1720309645'
+    invalid_number = '1220309645'
     assert ma.check(invalid_number) == False
 
 def test_ma_validation_small_size_number():
     """Test if a invalid number, with wrong size, is really invalid"""
 
-    invalid_number = '0172030'
+    invalid_number = '1272030'
+    assert ma.check(invalid_number) == False
+
+def test_ma_validation_start_different_03():
+    """Test if a invalid number start is different 12"""
+
+    invalid_number = '172030964'
     assert ma.check(invalid_number) == False
 
 def test_ma_validation_digit_verification():
