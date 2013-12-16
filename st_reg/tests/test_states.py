@@ -11,6 +11,7 @@ import st_reg.states.am as am
 import st_reg.states.ap as ap
 import st_reg.states.ce as ce
 import st_reg.states.es as es
+import st_reg.states.ma as ma
 
 #ACRE
 def test_ac_validation_right_size_invalid_number():
@@ -171,3 +172,29 @@ def test_es_validation():
 
     valid_number = '999999990'
     assert es.check(valid_number)
+
+#MARANHÃO
+
+def test_ma_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '1720309645'
+    assert ma.check(invalid_number) == False
+
+def test_ma_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '0172030'
+    assert ma.check(invalid_number) == False
+
+def test_ma_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '120000387'
+    assert ma.check(invalid_number) == False
+
+def test_ma_validation():
+    """Test if valid number"""
+
+    valid_number = '120000385'
+    assert ma.check(valid_number)
