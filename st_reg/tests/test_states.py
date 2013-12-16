@@ -69,17 +69,25 @@ def test_al_validation_digit_verification():
 #AMAZONAS
 
 def test_am_validation_rigth_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
     invalid_number = '999999999'
     assert am.check(invalid_number) == False
 
 def test_am_validation_rigth_size_valid_number():
-    invalid_number = '100000010'
-    assert am.check(invalid_number) == True
+    """Test if a valid number is really valid"""
+
+    valid_number = '100000010'
+    assert am.check(valid_number) == True
 
 def test_am_validation_big_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
     invalid_number = '9999999999'
     assert am.check(invalid_number) == False
 
 def test_am_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+    
     invalid_number ='99999999'
     assert am.check(invalid_number) == False
