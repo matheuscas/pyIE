@@ -31,12 +31,16 @@ def test_bahia_call():
     valid_number = '162345651' 
     bahia_index = 5
     assert con.check(valid_number, bahia_index)
-
     
 def test_ceara_call():
     invalid_number = '60000013'
     ceara_index = 6
     assert con.check(invalid_number, ceara_index) == False
+
+def test_distrito_federal_call():
+    valid_number = '0716109443382'
+    distrito_federal_index = 7
+    assert con.check(valid_number, distrito_federal_index) == True
 
 def test_espirito_santo_call():
     invalid_number = '999999905'
