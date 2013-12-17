@@ -26,7 +26,7 @@ import st_reg.states.pr as pr
 #import st_reg.states.rj as rj
 #import st_reg.states.rs as rs
 import st_reg.states.rn as rn
-#import st_reg.states.rs as rs
+import st_reg.states.rs as rs
 #import st_reg.states.ro as ro
 import st_reg.states.rr as rr
 import st_reg.states.sc as sc
@@ -568,6 +568,32 @@ def test_rr_validation():
 
     valid_number = '240061536'
     assert rr.check(valid_number)
+
+#RIO GRANDE DO SUL
+
+def test_rs_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert rs.check(invalid_number) == False
+
+def test_rs_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert rs.check(invalid_number) == False
+
+def test_rs_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '2243658791'
+    assert rs.check(invalid_number) == False
+
+def test_rs_validation():
+    """Test if valid number"""
+
+    valid_number = '2243658792'
+    assert rs.check(valid_number)
 
 #SANTA CATARINA
 
