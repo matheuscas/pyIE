@@ -33,7 +33,7 @@ import st_reg.states.rn as rn
 #import st_reg.states.ro as ro
 import st_reg.states.rr as rr
 import st_reg.states.sc as sc
-#import st_reg.states.sp as sp
+import st_reg.states.sp as sp
 #import st_reg.states.se as se
 #import st_reg.states.to as to
 
@@ -507,4 +507,49 @@ def test_sc_validation():
 
     valid_number = '251040852'
     assert sc.check(valid_number)
+
+#SÃO PAULO
+
+def test_sp_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert sp.check(invalid_number) == False
+
+
+def test_sp_validation_digit_verification_with_12_digits():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '110042490115'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_digit_verification_with_13_digits():
+    """Test if digit verification is invalid"""
+
+    invalid_number = 'P011004248003'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_start_different_P_with_13_digits():
+    """Test if a invalid number start is different P"""
+
+    invalid_number = 'U172030964897'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_with_12_digits():
+    """Test if valid number"""
+
+    valid_number = '110042490114'
+    assert sp.check(valid_number)
+
+def test_sp_validation_with_13_digits():
+    """Test if valid number"""
+
+    valid_number = 'P011004243002'
+    assert sp.check(valid_number)
 

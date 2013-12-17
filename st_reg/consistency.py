@@ -26,7 +26,7 @@ import states.rn as rn
 #import states.ro as ro
 import states.rr as rr
 import states.sc as sc
-#import states.sp as sp
+import states.sp as sp
 #import states.se as se
 #import states.to as to
 
@@ -84,7 +84,8 @@ def check(st_reg_number, state_index):
 	18:"pr.check("+ "\"" + st_reg_number + "\"" + ")",
 	20:"rn.check("+ "\"" + st_reg_number + "\"" + ")",
 	22:"rr.check("+ "\"" + st_reg_number + "\"" + ")",
-	24:"sc.check("+ "\"" + st_reg_number + "\"" + ")"
+	24:"sc.check("+ "\"" + st_reg_number + "\"" + ")",
+	26:"sp.check("+ "\"" + st_reg_number + "\"" + ")"
 
     }
 
