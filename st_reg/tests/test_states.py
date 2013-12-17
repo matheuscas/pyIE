@@ -13,7 +13,7 @@ import st_reg.states.ba as ba
 import st_reg.states.ce as ce
 import st_reg.states.df as df
 import st_reg.states.es as es
-#import st_reg.states.go as go
+import st_reg.states.go as go
 import st_reg.states.ma as ma
 #import st_reg.states.mt as mt
 import st_reg.states.ms as ms
@@ -171,7 +171,6 @@ def test_ba_validation_right_size_valid_number_8_digits_and_second_digit_differe
     """Test if a valid number is really valid with 8 digits"""
 
     valid_number = '74694200'
-    print ba.check(valid_number)
     assert ba.check(valid_number) == True
 
 def test_ba_validation_right_size_invalid_number_8_digits_and_second_digit_equal_6_7_9():
@@ -190,7 +189,6 @@ def test_ba_validation_right_size_invalid_number_9_digits_and_second_digit_diffe
     """Test if a invalid number is really invalid with 9 digits"""
 
     invalid_number = '123456749'
-    print ba.check(invalid_number)
     assert ba.check(invalid_number) == False
 
 def test_ba_validation_right_size_valid_number_9_digits_and_second_digit_different_6_7_9():
@@ -263,7 +261,6 @@ def test_df_validation_right_size_invalid_number():
     """Test if a invalid number is really invalid"""
 
     invalid_number= '0716109443381'
-    print df.check(invalid_number)
     assert df.check(invalid_number) == False
 
 def test_df_validation_right_size_valid_number():
@@ -309,6 +306,47 @@ def test_es_validation():
 
     valid_number = '999999990'
     assert es.check(valid_number)
+
+
+#GOIAS
+
+def test_go_validation_right_size_invalid_number():
+    """Test if the first two digits are different from 10,11,15"""
+    invalid_number = '135236987'
+    assert go.check(invalid_number) == False
+
+def test_go_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+    invalid_number = '113636921'
+    assert go.check(invalid_number) == False
+
+def test_go_validation_right_size_valid_number():
+    """Test if a valid number is really valid rest = 1 and number not be in (10103105, 10119997)"""
+    valid_number = '113636920'
+    assert go.check(valid_number) == True
+
+def test_go_validation_right_size_valid_number():
+    """Test if a valid number is really valid rest = 1 and number in (10103105, 10119997)"""
+    valid_number = '101199961'
+    assert go.check(valid_number) == True
+
+def test_go_validation_right_size_valid_number():
+    """Test if a valid number is really valid rest = 0"""
+    valid_number = '110010000'
+    assert go.check(valid_number) == True
+
+def test_go_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '10119996'
+    assert go.check(invalid_number) == False
+
+def test_go_validation_big_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '1011999611'
+    assert go.check(invalid_number) == False
+
 
 #MARANHÃO
 
