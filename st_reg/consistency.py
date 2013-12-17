@@ -5,7 +5,7 @@ import states.am as am
 import states.ap as ap
 import states.ba as ba
 import states.ce as ce
-#import states.df as df
+import states.df as df
 import states.es as es
 #import states.go as go
 import states.ma as ma
@@ -73,9 +73,11 @@ def check(st_reg_number, state_index):
         1:"ac.check("+ "\"" + st_reg_number + "\"" + ")",
         2:"al.check("+ "\"" + st_reg_number + "\"" + ")",
         3:"am.check("+ "\"" + st_reg_number + "\"" + ")",
+	5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
 	4:"ap.check("+ "\"" + st_reg_number + "\"" + ")",
 	5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
 	6:"ce.check("+ "\"" + st_reg_number + "\"" + ")",
+	7:"df.check("+ "\"" + st_reg_number + "\"" + ")",	
 	8:"es.check("+ "\"" + st_reg_number + "\"" + ")",
 	10:"ma.check("+ "\"" + st_reg_number + "\"" + ")",
 	12:"ms.check("+ "\"" + st_reg_number + "\"" + ")",

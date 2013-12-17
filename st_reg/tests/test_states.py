@@ -11,7 +11,7 @@ import st_reg.states.am as am
 import st_reg.states.ap as ap
 import st_reg.states.ba as ba
 import st_reg.states.ce as ce
-#import st_reg.states.df as df
+import st_reg.states.df as df
 import st_reg.states.es as es
 #import st_reg.states.go as go
 import st_reg.states.ma as ma
@@ -122,7 +122,6 @@ def test_am_validation_small_size_number():
     invalid_number ='99999999'
     assert am.check(invalid_number) == False
 
-
 #AMAPÁ
 
 def test_ap_validation_right_size_invalid_number():
@@ -150,7 +149,11 @@ def test_ap_validation_digit_verification():
     invalid_number = '030123456'
     assert ap.check(invalid_number) == False
 
+def test_ap_validation():
+    """Test if valid number"""
 
+    valid_number = '030123459'
+    assert ap.check(valid_number)
 
 #BAHIA
 
@@ -216,12 +219,6 @@ def test_ba_validation_big_size_number():
     invalid_number = '0030964575'
     assert ba.check(invalid_number) == False
 
-def test_ap_validation():
-    """Test if valid number"""
-
-    valid_number = '030123459'
-    assert ap.check(valid_number)
-
 #CEARÁ
 
 def test_ce_validation_right_size_invalid_number():
@@ -247,6 +244,38 @@ def test_ce_validation():
 
     valid_number = '060000015'
     assert ce.check(valid_number)
+
+# DISTRITO FEDERAL
+
+def test_df_validation_rigth_size_invalid_number():
+    """Test if a invalid number is invalid start with 07"""
+
+    invalid_number = '063000100195'
+    assert df.check(invalid_number) == False
+
+def test_df_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number= '0716109443381'
+    print df.check(invalid_number)
+    assert df.check(invalid_number) == False
+
+def test_df_validation_right_size_valid_number():
+    """Test if a valid number is really valid"""
+    valid= '0716109443382'
+    assert df.check(valid) == True
+
+def test_df_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '071610944338'
+    assert df.check(invalid_number) == False
+
+def test_df_validation_big_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '07161094433822'
+    assert df.check(invalid_number) == False
 
 #ESPÍRITO SANTO
 
@@ -370,7 +399,6 @@ def test_pa_validation():
     valid_number = '159999995'
     assert pa.check(valid_number)
 
-
 #PERNAMBUCO
 
 def test_pe_validation_right_size_invalid_number():
@@ -396,7 +424,6 @@ def test_pe_validation():
 
     valid_number = '032141840'
     assert pe.check(valid_number)
-
 
 #PARANÁ
 
@@ -552,4 +579,5 @@ def test_sp_validation_with_13_digits():
 
     valid_number = 'P011004243002'
     assert sp.check(valid_number)
+
 
