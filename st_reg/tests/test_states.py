@@ -31,7 +31,7 @@ import st_reg.states.pr as pr
 import st_reg.states.rn as rn
 #import st_reg.states.rs as rs
 #import st_reg.states.ro as ro
-#import st_reg.states.rr as rr
+import st_reg.states.rr as rr
 #import st_reg.states.sc as sc
 #import st_reg.states.sp as sp
 #import st_reg.states.se as se
@@ -449,4 +449,36 @@ def test_rn_validation():
 
     valid_number = '200400401'
     assert rn.check(valid_number)
+
+#RORAIMA
+
+def test_rr_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert rr.check(invalid_number) == False
+
+def test_rr_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert rr.check(invalid_number) == False
+
+def test_rr_validation_start_different_24():
+    """Test if a invalid number start is different 24"""
+
+    invalid_number = '172030964'
+    assert rr.check(invalid_number) == False
+
+def test_rr_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '240013406'
+    assert rr.check(invalid_number) == False
+
+def test_rr_validation():
+    """Test if valid number"""
+
+    valid_number = '240061536'
+    assert rr.check(valid_number)
 

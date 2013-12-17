@@ -72,3 +72,9 @@ def test_rio_grande_do_norte_call():
     invalid_number = '2000400407'
     rio_grande_do_norte_index = 20
     assert con.check(invalid_number, rio_grande_do_norte_index) == False
+
+def test_roraima_call():
+    invalid_number = '240082660'
+    roraima_index = 22
+    assert con.check(invalid_number, roraima_index) == False
+
