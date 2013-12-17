@@ -26,9 +26,9 @@ import states.rn as rn
 #import states.ro as ro
 import states.rr as rr
 import states.sc as sc
-#import states.sp as sp
-#import states.se as se
-#import states.to as to
+import states.sp as sp
+import states.se as se
+import states.to as to
 
 
 
@@ -89,9 +89,11 @@ def check(st_reg_number, state_index):
         18:"pr.check("+ "\"" + st_reg_number + "\"" + ")",
         20:"rn.check("+ "\"" + st_reg_number + "\"" + ")",
         22:"rr.check("+ "\"" + st_reg_number + "\"" + ")",
-        24:"sc.check("+ "\"" + st_reg_number + "\"" + ")"
-	   
-    }
+        24:"sc.check("+ "\"" + st_reg_number + "\"" + ")",
+        25:"se.check("+ "\"" + st_reg_number + "\"" + ")",
+        26:"sp.check("+ "\"" + st_reg_number + "\"" + ")",
+        27:"to.check("+ "\"" + st_reg_number + "\"" + ")"
+	       }
 
     exec('validity = ' + states_validations[state_index])
     return validity

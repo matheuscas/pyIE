@@ -20,11 +20,8 @@ import st_reg.states.ms as ms
 #import st_reg.states.mg as mg
 import st_reg.states.pa as pa
 import st_reg.states.pe as pe
-
 import st_reg.states.pr as pr
-
 #import st_reg.states.pb as pb
-#import st_reg.states.pr as pr
 #import st_reg.states.pi as pi
 #import st_reg.states.rj as rj
 #import st_reg.states.rs as rs
@@ -33,9 +30,9 @@ import st_reg.states.rn as rn
 #import st_reg.states.ro as ro
 import st_reg.states.rr as rr
 import st_reg.states.sc as sc
-#import st_reg.states.sp as sp
-#import st_reg.states.se as se
-#import st_reg.states.to as to
+import st_reg.states.sp as sp
+import st_reg.states.se as se
+import st_reg.states.to as to
 
 
 
@@ -122,7 +119,6 @@ def test_am_validation_small_size_number():
     invalid_number ='99999999'
     assert am.check(invalid_number) == False
 
-
 #AMAPÁ
 
 def test_ap_validation_right_size_invalid_number():
@@ -155,9 +151,6 @@ def test_ap_validation():
 
     valid_number = '030123459'
     assert ap.check(valid_number)
-
-
-
 
 #BAHIA
 
@@ -221,7 +214,6 @@ def test_ba_validation_big_size_number():
     invalid_number = '0030964575'
     assert ba.check(invalid_number) == False
 
-
 #CEARÁ
 
 def test_ce_validation_right_size_invalid_number():
@@ -247,7 +239,6 @@ def test_ce_validation():
 
     valid_number = '060000015'
     assert ce.check(valid_number)
-
 
 # DISTRITO FEDERAL
 
@@ -279,7 +270,6 @@ def test_df_validation_big_size_number():
 
     invalid_number = '07161094433822'
     assert df.check(invalid_number) == False
-
 
 #ESPÍRITO SANTO
 
@@ -444,7 +434,6 @@ def test_pa_validation():
     valid_number = '159999995'
     assert pa.check(valid_number)
 
-
 #PERNAMBUCO
 
 def test_pe_validation_right_size_invalid_number():
@@ -470,8 +459,6 @@ def test_pe_validation():
 
     valid_number = '032141840'
     assert pe.check(valid_number)
-
-
 
 #PARANÁ
 
@@ -583,4 +570,107 @@ def test_sc_validation():
     valid_number = '251040852'
     assert sc.check(valid_number)
 
+#SERGIPE
+
+def test_se_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert se.check(invalid_number) == False
+
+def test_se_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert se.check(invalid_number) == False
+
+def test_se_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '271234566'
+    assert se.check(invalid_number) == False
+
+def test_se_validation():
+    """Test if valid number"""
+
+    valid_number = '271234563'
+    assert se.check(valid_number)
+
+#SÃO PAULO
+
+def test_sp_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert sp.check(invalid_number) == False
+
+
+def test_sp_validation_digit_verification_with_12_digits():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '110042490115'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_digit_verification_with_13_digits():
+    """Test if digit verification is invalid"""
+
+    invalid_number = 'P011004248003'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_start_different_P_with_13_digits():
+    """Test if a invalid number start is different P"""
+
+    invalid_number = 'U172030964897'
+    assert sp.check(invalid_number) == False
+
+def test_sp_validation_with_12_digits():
+    """Test if valid number"""
+
+    valid_number = '110042490114'
+    assert sp.check(valid_number)
+
+def test_sp_validation_with_13_digits():
+    """Test if valid number"""
+
+    valid_number = 'P011004243002'
+    assert sp.check(valid_number)
+
+
+#TOCANTINS
+
+def test_to_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert to.check(invalid_number) == False
+
+def test_to_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert to.check(invalid_number) == False
+
+def test_to_validation_third_and_fourth_digit():
+    """Test if invalid third and fourth digit"""
+
+    invalid_number = '06087879999'
+    assert to.check(invalid_number) == False
+
+def test_to_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '29010227833'
+    assert to.check(invalid_number) == False
+
+def test_to_validation():
+    """Test if valid number"""
+
+    valid_number = '29010227836'
+    assert to.check(valid_number)
 
