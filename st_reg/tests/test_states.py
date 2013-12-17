@@ -20,11 +20,8 @@ import st_reg.states.ms as ms
 #import st_reg.states.mg as mg
 import st_reg.states.pa as pa
 import st_reg.states.pe as pe
-
 import st_reg.states.pr as pr
-
 #import st_reg.states.pb as pb
-#import st_reg.states.pr as pr
 #import st_reg.states.pi as pi
 #import st_reg.states.rj as rj
 #import st_reg.states.rs as rs
@@ -34,7 +31,7 @@ import st_reg.states.rn as rn
 import st_reg.states.rr as rr
 import st_reg.states.sc as sc
 import st_reg.states.sp as sp
-#import st_reg.states.se as se
+import st_reg.states.se as se
 import st_reg.states.to as to
 
 
@@ -534,6 +531,32 @@ def test_sc_validation():
 
     valid_number = '251040852'
     assert sc.check(valid_number)
+
+#SERGIPE
+
+def test_se_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert se.check(invalid_number) == False
+
+def test_se_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert se.check(invalid_number) == False
+
+def test_se_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '271234566'
+    assert se.check(invalid_number) == False
+
+def test_se_validation():
+    """Test if valid number"""
+
+    valid_number = '271234563'
+    assert se.check(valid_number)
 
 #SÃO PAULO
 
