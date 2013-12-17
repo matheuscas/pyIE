@@ -15,7 +15,7 @@ import st_reg.states.df as df
 import st_reg.states.es as es
 import st_reg.states.go as go
 import st_reg.states.ma as ma
-#import st_reg.states.mt as mt
+import st_reg.states.mt as mt
 import st_reg.states.ms as ms
 #import st_reg.states.mg as mg
 import st_reg.states.pa as pa
@@ -369,6 +369,31 @@ def test_ma_validation():
 
     valid_number = '120000385'
     assert ma.check(valid_number)
+
+#MATO GROSSO
+
+def test_mt_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+    invalid_number = '95192196672'
+    assert mt.check(invalid_number) == False
+
+def test_mt_validation_right_size_valid_number():
+    """Test if a valid number is really valid"""
+    valid_number = '00130000019'
+    print mt.check(valid_number)
+    assert mt.check(valid_number) == True
+
+def test_go_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '0013000001'
+    assert go.check(invalid_number) == False
+
+def test_go_validation_big_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '10119996111'
+    assert go.check(invalid_number) == False
 
 #MATO GROSSO DO SUL
 
