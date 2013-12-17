@@ -59,10 +59,30 @@ def test_mato_grosso_do_sul_call():
 
 def test_para_call():
     invalid_number = '159999999'
-    para_index = 12
+    para_index = 14
     assert con.check(invalid_number, para_index) == False
 
 def test_pernambuco_call():
     invalid_number = '032141833'
-    pernambuco_index = 14
+    pernambuco_index = 16
     assert con.check(invalid_number, pernambuco_index) == False
+
+def test_parana_call():
+    invalid_number = '1234567851'
+    parana_index = 18
+    assert con.check(invalid_number, parana_index) == False
+
+def test_rio_grande_do_norte_call():
+    invalid_number = '2000400407'
+    rio_grande_do_norte_index = 20
+    assert con.check(invalid_number, rio_grande_do_norte_index) == False
+
+def test_roraima_call():
+    invalid_number = '240082660'
+    roraima_index = 22
+    assert con.check(invalid_number, roraima_index) == False
+
+def test_santa_catarina_call():
+    invalid_number = '251040855'
+    santa_catarina_index = 24
+    assert con.check(invalid_number, santa_catarina_index) == False
