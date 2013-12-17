@@ -28,7 +28,7 @@ import st_reg.states.pr as pr
 #import st_reg.states.pi as pi
 #import st_reg.states.rj as rj
 #import st_reg.states.rs as rs
-#import st_reg.states.rn as rn
+import st_reg.states.rn as rn
 #import st_reg.states.rs as rs
 #import st_reg.states.ro as ro
 #import st_reg.states.rr as rr
@@ -423,4 +423,30 @@ def test_pr_validation():
 
     valid_number = '1234567850'
     assert pr.check(valid_number)
+
+#RIO GRANDE DO NORTE
+
+def test_rn_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '20172030964577'
+    assert rn.check(invalid_number) == False
+
+def test_rn_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '207030'
+    assert rn.check(invalid_number) == False
+
+def test_rn_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '200400405'
+    assert rn.check(invalid_number) == False
+
+def test_rn_validation():
+    """Test if valid number"""
+
+    valid_number = '200400401'
+    assert rn.check(valid_number)
 
