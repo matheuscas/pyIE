@@ -7,7 +7,7 @@ import states.ba as ba
 import states.ce as ce
 import states.df as df
 import states.es as es
-#import states.go as go
+import states.go as go
 import states.ma as ma
 #import states.mt as mt
 import states.ms as ms
@@ -73,12 +73,12 @@ def check(st_reg_number, state_index):
         1:"ac.check("+ "\"" + st_reg_number + "\"" + ")",
         2:"al.check("+ "\"" + st_reg_number + "\"" + ")",
         3:"am.check("+ "\"" + st_reg_number + "\"" + ")",
-	5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
 	4:"ap.check("+ "\"" + st_reg_number + "\"" + ")",
-	5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
+        5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
 	6:"ce.check("+ "\"" + st_reg_number + "\"" + ")",
 	7:"df.check("+ "\"" + st_reg_number + "\"" + ")",	
 	8:"es.check("+ "\"" + st_reg_number + "\"" + ")",
+	9:"go.check("+ "\"" + st_reg_number + "\"" + ")",	
 	10:"ma.check("+ "\"" + st_reg_number + "\"" + ")",
 	12:"ms.check("+ "\"" + st_reg_number + "\"" + ")",
 	14:"pa.check("+ "\"" + st_reg_number + "\"" + ")",
@@ -93,6 +93,7 @@ def check(st_reg_number, state_index):
 	27:"to.check("+ "\"" + st_reg_number + "\"" + ")"
 
     }
+
 
     exec('validity = ' + states_validations[state_index])
     return validity

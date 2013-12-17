@@ -47,6 +47,12 @@ def test_espirito_santo_call():
     espirito_santo_index = 8
     assert con.check(invalid_number, espirito_santo_index) == False
 
+def test_goias_call():
+    valid_number = '110010000'
+    goais_index = 9
+    assert  con.check(valid_number, goais_index) == True
+
+
 def test_maranhao_call():
     invalid_number = '120000382'
     maranhao_index = 10
