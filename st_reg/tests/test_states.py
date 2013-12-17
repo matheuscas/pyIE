@@ -35,7 +35,7 @@ import st_reg.states.rr as rr
 import st_reg.states.sc as sc
 import st_reg.states.sp as sp
 #import st_reg.states.se as se
-#import st_reg.states.to as to
+import st_reg.states.to as to
 
 
 
@@ -580,4 +580,36 @@ def test_sp_validation_with_13_digits():
     valid_number = 'P011004243002'
     assert sp.check(valid_number)
 
+
+#TOCANTINS
+
+def test_to_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '24172030964577'
+    assert to.check(invalid_number) == False
+
+def test_to_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '247030'
+    assert to.check(invalid_number) == False
+
+def test_to_validation_third_and_fourth_digit():
+    """Test if invalid third and fourth digit"""
+
+    invalid_number = '06087879999'
+    assert to.check(invalid_number) == False
+
+def test_to_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '29010227833'
+    assert to.check(invalid_number) == False
+
+def test_to_validation():
+    """Test if valid number"""
+
+    valid_number = '29010227836'
+    assert to.check(valid_number)
 

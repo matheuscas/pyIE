@@ -91,3 +91,8 @@ def test_sao_paulo_call():
     invalid_number = 'T011004248003'
     sao_paulo_index = 26
     assert con.check(invalid_number, sao_paulo_index) == False
+
+def test_tocantins_call():
+    invalid_number = '29010227831'
+    tocantins_index = 27
+    assert con.check(invalid_number, tocantins_index) == False
