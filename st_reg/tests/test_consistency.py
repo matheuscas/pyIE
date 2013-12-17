@@ -78,6 +78,11 @@ def test_parana_call():
     parana_index = 18
     assert con.check(invalid_number, parana_index) == False
 
+def test_rio_de_janeiro_call():
+    invalid_number = '10022009'
+    parana_index = 19
+    assert con.check(invalid_number, parana_index) == False
+
 def test_rio_grande_do_norte_call():
     invalid_number = '2000400407'
     rio_grande_do_norte_index = 20
