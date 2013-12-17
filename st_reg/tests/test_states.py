@@ -15,13 +15,13 @@ import st_reg.states.df as df
 import st_reg.states.es as es
 import st_reg.states.go as go
 import st_reg.states.ma as ma
-#import st_reg.states.mt as mt
+import st_reg.states.mt as mt
 import st_reg.states.ms as ms
 #import st_reg.states.mg as mg
 import st_reg.states.pa as pa
 import st_reg.states.pe as pe
 import st_reg.states.pr as pr
-#import st_reg.states.pb as pb
+import st_reg.states.pb as pb
 #import st_reg.states.pi as pi
 import st_reg.states.rj as rj
 import st_reg.states.rn as rn
@@ -369,6 +369,32 @@ def test_ma_validation():
     valid_number = '120000385'
     assert ma.check(valid_number)
 
+#MATO GROSSO
+
+def test_mt_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '95192196672'
+    assert mt.check(invalid_number) == False
+
+def test_mt_validation_right_size_valid_number():
+    """Test if a valid number is really valid"""
+
+    valid_number = '00130000019'
+    assert mt.check(valid_number) == True
+
+def test_mt_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '0013000001'
+    assert mt.check(invalid_number) == False
+
+def test_mt_validation_big_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '10119996111'
+    assert mt.check(invalid_number) == False
+
 #MATO GROSSO DO SUL
 
 def test_ms_validation_right_size_invalid_number():
@@ -432,6 +458,32 @@ def test_pa_validation():
 
     valid_number = '159999995'
     assert pa.check(valid_number)
+
+#PARAIBA
+
+def test_pb_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '060000014'
+    assert pb.check(invalid_number) == False
+
+def test_pb_validation_right_size_valid_number():
+    """Test if a valid number is really valid"""
+
+    valid_number = '060000015'
+    assert pb.check(valid_number) == True
+
+def test_pb_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '06000001'
+    assert pb.check(invalid_number) == False
+
+def test_pb_validation_big_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '0600000151'
+    assert pb.check(invalid_number) == False
 
 #PERNAMBUCO
 

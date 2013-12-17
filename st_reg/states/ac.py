@@ -1,5 +1,3 @@
-import df
-
 def check(st_reg_number):
     """Checks the number valiaty for the Acre state"""
     #st_reg_number = str(st_reg_number)
