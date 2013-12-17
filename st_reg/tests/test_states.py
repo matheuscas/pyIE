@@ -22,7 +22,7 @@ import st_reg.states.pa as pa
 import st_reg.states.pe as pe
 import st_reg.states.pr as pr
 import st_reg.states.pb as pb
-#import st_reg.states.pi as pi
+import st_reg.states.pi as pi
 import st_reg.states.rj as rj
 import st_reg.states.rn as rn
 import st_reg.states.rs as rs
@@ -510,6 +510,32 @@ def test_pe_validation():
 
     valid_number = '032141840'
     assert pe.check(valid_number)
+
+#PIAUÍ
+
+def test_pi_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '1520309645'
+    assert pi.check(invalid_number) == False
+
+def test_pi_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '1572030'
+    assert pi.check(invalid_number) == False
+
+def test_pi_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '012345670'
+    assert pi.check(invalid_number) == False
+
+def test_pi_validation():
+    """Test if valid number"""
+
+    valid_number = '012345679'
+    assert pi.check(valid_number)
 
 #PARANÁ
 
