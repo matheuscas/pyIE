@@ -78,3 +78,7 @@ def test_roraima_call():
     roraima_index = 22
     assert con.check(invalid_number, roraima_index) == False
 
+def test_santa_catarina_call():
+    invalid_number = '251040855'
+    santa_catarina_index = 24
+    assert con.check(invalid_number, santa_catarina_index) == False
