@@ -11,7 +11,7 @@ import states.go as go
 import states.ma as ma
 import states.mt as mt
 import states.ms as ms
-#import states.mg as mg
+import states.mg as mg
 import states.pa as pa
 import states.pb as pb
 import states.pe as pe
@@ -70,25 +70,28 @@ def check(st_reg_number, state_index):
         1:"ac.check("+ "\"" + st_reg_number + "\"" + ")",
         2:"al.check("+ "\"" + st_reg_number + "\"" + ")",
         3:"am.check("+ "\"" + st_reg_number + "\"" + ")",
-	4:"ap.check("+ "\"" + st_reg_number + "\"" + ")",
+        4:"ap.check("+ "\"" + st_reg_number + "\"" + ")",
         5:"ba.check("+ "\"" + st_reg_number + "\"" + ")",
-	6:"ce.check("+ "\"" + st_reg_number + "\"" + ")",
-	7:"df.check("+ "\"" + st_reg_number + "\"" + ")",	
-	8:"es.check("+ "\"" + st_reg_number + "\"" + ")",
-	9:"go.check("+ "\"" + st_reg_number + "\"" + ")",	
-	10:"ma.check("+ "\"" + st_reg_number + "\"" + ")",
-	12:"ms.check("+ "\"" + st_reg_number + "\"" + ")",
-	14:"pa.check("+ "\"" + st_reg_number + "\"" + ")",
-	16:"pe.check("+ "\"" + st_reg_number + "\"" + ")",
-	18:"pr.check("+ "\"" + st_reg_number + "\"" + ")",
-	19:"rj.check("+ "\"" + st_reg_number + "\"" + ")",
-	20:"rn.check("+ "\"" + st_reg_number + "\"" + ")",
-	22:"rr.check("+ "\"" + st_reg_number + "\"" + ")",
-	23:"rs.check("+ "\"" + st_reg_number + "\"" + ")",
-	24:"sc.check("+ "\"" + st_reg_number + "\"" + ")",
-	25:"se.check("+ "\"" + st_reg_number + "\"" + ")",
-	26:"sp.check("+ "\"" + st_reg_number + "\"" + ")",
-	27:"to.check("+ "\"" + st_reg_number + "\"" + ")"
+        6:"ce.check("+ "\"" + st_reg_number + "\"" + ")",
+        7:"df.check("+ "\"" + st_reg_number + "\"" + ")",	
+        8:"es.check("+ "\"" + st_reg_number + "\"" + ")",
+        9:"go.check("+ "\"" + st_reg_number + "\"" + ")",
+        10:"ma.check("+ "\"" + st_reg_number + "\"" + ")",
+        11:"mg.check("+ "\"" + st_reg_number + "\"" + ")",
+        12:"ms.check("+ "\"" + st_reg_number + "\"" + ")",
+        13:"mt.check("+ "\"" + st_reg_number + "\"" + ")",
+        14:"pa.check("+ "\"" + st_reg_number + "\"" + ")",
+        15:"pb.check("+ "\"" + st_reg_number + "\"" + ")",
+        16:"pe.check("+ "\"" + st_reg_number + "\"" + ")",
+        18:"pr.check("+ "\"" + st_reg_number + "\"" + ")",
+        19:"rj.check("+ "\"" + st_reg_number + "\"" + ")",
+        20:"rn.check("+ "\"" + st_reg_number + "\"" + ")",
+        22:"rr.check("+ "\"" + st_reg_number + "\"" + ")",
+        23:"rs.check("+ "\"" + st_reg_number + "\"" + ")",
+        24:"sc.check("+ "\"" + st_reg_number + "\"" + ")",
+        25:"se.check("+ "\"" + st_reg_number + "\"" + ")",
+        26:"sp.check("+ "\"" + st_reg_number + "\"" + ")",
+        27:"to.check("+ "\"" + st_reg_number + "\"" + ")"
 
     }
 

@@ -52,21 +52,35 @@ def test_goias_call():
     goais_index = 9
     assert  con.check(valid_number, goais_index) == True
 
-
 def test_maranhao_call():
     invalid_number = '120000382'
     maranhao_index = 10
     assert con.check(invalid_number, maranhao_index) == False
+
+def test_minas_gerais_call():
+    valid_number = '5055050000005'
+    minas_gerais_index = 11
+    assert con.check(valid_number, minas_gerais_index) == True
 
 def test_mato_grosso_do_sul_call():
     invalid_number = '280000009'
     mato_grosso_do_sul_index = 12
     assert con.check(invalid_number, mato_grosso_do_sul_index) == False
 
+def test_mato_grosso_call():
+    valid_number = '00130000019'
+    goais_index = 13
+    assert  con.check(valid_number, goais_index) == True
+
 def test_para_call():
     invalid_number = '159999999'
     para_index = 14
     assert con.check(invalid_number, para_index) == False
+
+def test_paraiba_call():
+    valid_number = '060000015'
+    goais_index = 15
+    assert  con.check(valid_number, goais_index) == True
 
 def test_pernambuco_call():
     invalid_number = '032141833'

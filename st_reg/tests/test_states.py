@@ -17,7 +17,7 @@ import st_reg.states.go as go
 import st_reg.states.ma as ma
 import st_reg.states.mt as mt
 import st_reg.states.ms as ms
-#import st_reg.states.mg as mg
+import st_reg.states.mg as mg
 import st_reg.states.pa as pa
 import st_reg.states.pe as pe
 import st_reg.states.pr as pr
@@ -426,6 +426,34 @@ def test_ms_validation():
 
     valid_number = '280000006'
     assert ms.check(valid_number)
+# MINAS GERAIS
+
+def test_mg_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '5055050000003'
+    assert mg.check(invalid_number) == False
+
+def test_mg_validation_right_size_valid_number():
+    """Test if a valid number is really valid"""
+
+    valid = '4351289641815'
+    assert mg.check(valid) == True
+
+def test_mg_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '505505000000'
+    assert mg.check(invalid_number) == False
+
+def test_mg_validation_big_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '50550500000053'
+    assert mg.check(invalid_number) == False
+
+
+
 
 #PARA
 
