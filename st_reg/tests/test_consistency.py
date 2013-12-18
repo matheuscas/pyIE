@@ -87,6 +87,11 @@ def test_pernambuco_call():
     pernambuco_index = 16
     assert con.check(invalid_number, pernambuco_index) == False
 
+def test_piaui_call():
+    invalid_number = '012345672'
+    piaui_index = 17
+    assert con.check(invalid_number, piaui_index) == False
+
 def test_parana_call():
     invalid_number = '1234567851'
     parana_index = 18
@@ -101,6 +106,11 @@ def test_rio_grande_do_norte_call():
     invalid_number = '2000400407'
     rio_grande_do_norte_index = 20
     assert con.check(invalid_number, rio_grande_do_norte_index) == False
+
+def test_rodonia_call():
+    invalid_number = '101625214'
+    rodonia_index = 21
+    assert con.check(invalid_number, rodonia_index) == False
 
 def test_roraima_call():
     invalid_number = '240082660'

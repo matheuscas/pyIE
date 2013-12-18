@@ -22,11 +22,11 @@ import st_reg.states.pa as pa
 import st_reg.states.pe as pe
 import st_reg.states.pr as pr
 import st_reg.states.pb as pb
-#import st_reg.states.pi as pi
+import st_reg.states.pi as pi
 import st_reg.states.rj as rj
 import st_reg.states.rn as rn
 import st_reg.states.rs as rs
-#import st_reg.states.ro as ro
+import st_reg.states.ro as ro
 import st_reg.states.rr as rr
 import st_reg.states.sc as sc
 import st_reg.states.sp as sp
@@ -539,6 +539,32 @@ def test_pe_validation():
     valid_number = '032141840'
     assert pe.check(valid_number)
 
+#PIAUÍ
+
+def test_pi_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '1520309645'
+    assert pi.check(invalid_number) == False
+
+def test_pi_validation_small_size_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '1572030'
+    assert pi.check(invalid_number) == False
+
+def test_pi_validation_digit_verification():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '012345670'
+    assert pi.check(invalid_number) == False
+
+def test_pi_validation():
+    """Test if valid number"""
+
+    valid_number = '012345679'
+    assert pi.check(valid_number)
+
 #PARANÁ
 
 def test_pr_validation_right_size_invalid_number():
@@ -616,6 +642,44 @@ def test_rn_validation():
 
     valid_number = '200400401'
     assert rn.check(valid_number)
+
+#RONDÔNIA
+
+def test_ro_validation_right_size_invalid_number():
+    """Test if a invalid number is really invalid"""
+
+    invalid_number = '201728030964577'
+    assert ro.check(invalid_number) == False
+
+def test_ro_validation_small_size_invalid_number():
+    """Test if a invalid number, with wrong size, is really invalid"""
+
+    invalid_number = '207030'
+    assert ro.check(invalid_number) == False
+
+def test_ro_validation_digit_verification_with_9_digits():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '101625218'
+    assert ro.check(invalid_number) == False
+
+def test_ro_validation_with_9_digits():
+    """Test if valid number"""
+
+    valid_number = '101625213'
+    assert ro.check(valid_number)
+
+def test_ro_validation_digit_verification_with_14_digits():
+    """Test if digit verification is invalid"""
+
+    invalid_number = '00000000625215'
+    assert ro.check(invalid_number) == False
+
+def test_ro_validation_with_14_digits():
+    """Test if valid number"""
+
+    valid_number = '00000000625213'
+    assert ro.check(valid_number)
 
 #RORAIMA
 

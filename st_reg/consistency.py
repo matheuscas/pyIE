@@ -16,11 +16,11 @@ import states.pa as pa
 import states.pb as pb
 import states.pe as pe
 import states.pr as pr
-#import states.pi as pi
+import states.pi as pi
 import states.rj as rj
 import states.rn as rn
 import states.rs as rs
-#import states.ro as ro
+import states.ro as ro
 import states.rr as rr
 import states.sc as sc
 import states.sp as sp
@@ -83,9 +83,11 @@ def check(st_reg_number, state_index):
         14:"pa.check("+ "\"" + st_reg_number + "\"" + ")",
         15:"pb.check("+ "\"" + st_reg_number + "\"" + ")",
         16:"pe.check("+ "\"" + st_reg_number + "\"" + ")",
+        17:"pi.check("+ "\"" + st_reg_number + "\"" + ")",
         18:"pr.check("+ "\"" + st_reg_number + "\"" + ")",
         19:"rj.check("+ "\"" + st_reg_number + "\"" + ")",
         20:"rn.check("+ "\"" + st_reg_number + "\"" + ")",
+        21:"ro.check("+ "\"" + st_reg_number + "\"" + ")",
         22:"rr.check("+ "\"" + st_reg_number + "\"" + ")",
         23:"rs.check("+ "\"" + st_reg_number + "\"" + ")",
         24:"sc.check("+ "\"" + st_reg_number + "\"" + ")",
@@ -93,6 +95,7 @@ def check(st_reg_number, state_index):
         26:"sp.check("+ "\"" + st_reg_number + "\"" + ")",
         27:"to.check("+ "\"" + st_reg_number + "\"" + ")"
 
+	
     }
 
 
