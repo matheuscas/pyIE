@@ -1,4 +1,5 @@
-
+#REFATORAR
+#RETIRA ESSE METODO algoritm_df de dentro do check. Assim ele pode ser reaproveitado
 def check(st_reg_number):
 	"""Checks the number valiaty for the Distrito Federal state"""
 	
