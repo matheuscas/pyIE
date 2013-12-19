@@ -96,16 +96,16 @@ def test_al_validation_digit_verification():
 #AMAZONAS
 
 #REFATORAR
-#EM VEM DE 'RIGTH', USE 'RIGHT' 
-def test_am_validation_rigth_size_invalid_number():
+#EM VEM DE 'Right', USE 'RIGHT' 
+def test_am_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
     invalid_number = '999999999'
     assert am.check(invalid_number) == False
 
 #REFATORAR
-#EM VEM DE 'RIGTH', USE 'RIGHT' 
-def test_am_validation_rigth_size_valid_number():
+#EM VEM DE 'Right', USE 'RIGHT' 
+def test_am_validation_right_size_valid_number():
     """Test if an valid number is really valid"""
 
     valid_number = '100000010'
@@ -250,10 +250,8 @@ def test_ce_validation():
 
 # DISTRITO FEDERAL
 
-#REFATORAR
-#EM VEM DE 'RIGTH', USE 'RIGHT'
-def test_df_validation_rigth_size_invalid_number():
-    """Test if a invalid number is invalid start with 07"""
+def test_df_validation_right_size_invalid_number_star_with_07():
+    """Test if a invalid number is really invalid. The state registration must start with 07"""
 
     invalid_number = '063000100195'
     assert df.check(invalid_number) == False
@@ -261,7 +259,7 @@ def test_df_validation_rigth_size_invalid_number():
 #REFATORAR
 #ESSE TESTE É IGUAL AO ANTERIOR? A ASSINATURA ESTÁ IGUAL
 def test_df_validation_right_size_invalid_number():
-    """Test if an invalid number is really invalid"""
+    """Test if an invalid number is really invalid. The number start 07"""
 
     invalid_number= '0716109443381'
     assert df.check(invalid_number) == False
@@ -316,34 +314,28 @@ def test_es_validation():
 
 
 #GOIAS
-def test_go_validation_right_size_invalid_number():
+def test_go_validation_right_size_invalid_number_():
     """Test if the first two digits are different from 10,11,15"""
     invalid_number = '135236987'
     assert go.check(invalid_number) == False
 
-#REFATORAR
-#ESSE TESTE É IGUAL AO ANTERIOR? A ASSINATURA ESTÁ IGUAL
 def test_go_validation_right_size_invalid_number():
     """Test if a invalid number is really invalid"""
     invalid_number = '113636921'
     assert go.check(invalid_number) == False
 
-def test_go_validation_right_size_valid_number():
-    """Test if a valid number is really valid rest = 1 and number not be in (10103105, 10119997)"""
+def test_go_validation_right_size_valid_number_not_in_interval_10103105_the_10119997():
+    """Test if a valid number is really valid rest = 1 and number not be in interval (10103105, 10119997)"""
     valid_number = '113636920'
     assert go.check(valid_number) == True
 
-#REFATORAR
-#ESSE TESTE É IGUAL AO ANTERIOR? A ASSINATURA ESTÁ IGUAL
-def test_go_validation_right_size_valid_number():
-    """Test if a valid number is really valid rest = 1 and number in (10103105, 10119997)"""
+def test_go_validation_right_size_valid_number_in_interval_10103105_the_10119997():
+    """Test if a valid number is really valid rest = 1 and number interval (10103105, 10119997)"""
     valid_number = '101199961'
     assert go.check(valid_number) == True
 
-#REFATORAR
-#ESSE TESTE É IGUAL AO ANTERIOR? A ASSINATURA ESTÁ IGUAL
-def test_go_validation_right_size_valid_number():
-    """Test if a valid number is really valid rest = 0"""
+def test_go_validation_right_size_valid_number_digit_verifier_equal_the_zero():
+    """Test if a valid number is really valid com digit verifier equal to zero"""
     valid_number = '110010000'
     assert go.check(valid_number) == True
 
