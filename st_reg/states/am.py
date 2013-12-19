@@ -1,4 +1,4 @@
-def check (st_reg_number ):
+def check (st_reg_number):
         """Checks the number valiaty for the Amazonas state"""
         weights = range(2,10)
         digits = st_reg_number[0:len(st_reg_number) - 1]
@@ -8,25 +8,18 @@ def check (st_reg_number ):
         if len(st_reg_number) != 9:
                 return False
 
+        sum_total = 0
 
-        sum = 0
+        for i in weights:
+                sum_total = sum_total + i * int(digits[i-2])
 
-        for i in weights:                         
-                sum = sum + i * int(digits[i - 2])        
-
-        if sum < control_digit:
-                control_digit = 11 - sum
+        if sum_total < control_digit:
+                control_digit = 11 - sum_total
                 return str(digit_calculated) == check_digit
 
-        elif sum%11 <= 1:
+        elif sum_total % 11 <= 1:
                 return '0' == check_digit
 
         else:
-                digit_calculated = 11 - sum % 11
+                digit_calculated = 11 - sum_total % 11
                 return str(digit_calculated) == check_digit
-
-        
-
-
-
-
