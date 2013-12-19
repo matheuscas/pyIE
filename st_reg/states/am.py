@@ -1,6 +1,6 @@
 def check (st_reg_number):
         """Checks the number valiaty for the Amazonas state"""
-        weights = range(2,10)
+        weights = range(2, 10)
         digits = st_reg_number[0:len(st_reg_number) - 1]
         control_digit = 11
         check_digit = st_reg_number[-1:]

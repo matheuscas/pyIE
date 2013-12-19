@@ -1,24 +1,27 @@
 # *-* coding:utf-8 *-*
-def check (st_reg_number):
+"""Module state Rio de Janeiro"""
 
-	DIVISOR = 11
-	
-	weights = [2, 7, 6, 5, 4, 3, 2]
 
-	if len(st_reg_number)>8:
-		return False
-	
-	if len(st_reg_number)<8:
-		return False
+def check(st_reg_number):
+    """Checks the number valiaty for the Rio de Janeiro state"""
+    divisor = 11
 
-	sum = 0
-	for i in range(len(st_reg_number)-1):
-		sum = sum + int(st_reg_number[i]) * weights[i]
+    weights = [2, 7, 6, 5, 4, 3, 2]
 
-	rest_division = sum % DIVISOR
-	digit = DIVISOR - rest_division		
+    if len(st_reg_number) > 8:
+        return False
 
-	if rest_division < 2:
-		digit = 0
-	
-	return digit == int(st_reg_number[len(st_reg_number)-1])
+    if len(st_reg_number) < 8:
+        return False
+
+    sum_total = 0
+    for i in range(len(st_reg_number)-1):
+        sum_total = sum_total + int(st_reg_number[i]) * weights[i]
+
+    rest_division = sum_total % divisor
+    digit = divisor - rest_division
+
+    if rest_division < 2:
+        digit = 0
+
+    return digit == int(st_reg_number[len(st_reg_number)-1])
