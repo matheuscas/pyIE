@@ -34,5 +34,5 @@ def check(st_reg_number):
 
     if second_digit == 10 or second_digit == 11:
         second_digit = 0
-        
+
     return str(first_digit) + str(second_digit) == check_digits
