@@ -77,34 +77,19 @@ def test_al_validation_start_different_24():
     invalid_number = '172030964'
     assert al.check(invalid_number) == False
 
-#REFATORAR
-#NEM A ASSINATURA DO TESTE NEM O DOCTEST DIZEM O QUE ELE FAZ - ESTÁ CONFUSO
-def test_al_validation_type_business():
-    """Test if an invalid number is str[2] different 0 or 3 or 5 or 7 or 8"""
+def test_al_validation_third_digit_corresponds_to_type_of_company():
+    """Test if invalid when the third digit is different to 0 or 3 or 5 or 7 or 8"""
 
     invalid_number = '172030964'
     assert al.check(invalid_number) == False
 
-#REFATORAR
-#NEM A ASSINATURA DO TESTE NEM O DOCTEST DIZEM O QUE ELE FAZ - ESTÁ CONFUSO
-def test_al_validation_digit_verification():
-    """Test if an invalid digit verification"""
+def test_al_validation_check_digit():
+    """Test if invalid the check digit calculation"""
 
     invalid_number = '240071779'
     assert al.check(invalid_number) == False
 
 #AMAZONAS
-
-#REFATORAR
-#EM VEM DE 'Right', USE 'RIGHT' 
-def test_am_validation_right_size_invalid_number():
-    """Test if an invalid number is really invalid"""
-
-    invalid_number = '999999999'
-    assert am.check(invalid_number) == False
-
-#REFATORAR
-#EM VEM DE 'Right', USE 'RIGHT' 
 def test_am_validation_right_size_valid_number():
     """Test if an valid number is really valid"""
 
@@ -142,19 +127,14 @@ def test_ap_validation_start_different_03():
     invalid_number = '172030964'
     assert ap.check(invalid_number) == False
 
-#REFATORAR
-#NEM A ASSINATURA DO TESTE NEM O DOCTEST DIZEM O QUE ELE FAZ - ESTÁ CONFUSO
-def test_ap_validation_digit_verification():
-    """Test if an invalid digit verification"""
+def test_ap_validation_check_digit():
+    """Test if invalid the check digit calculation"""
 
     invalid_number = '030123456'
     assert ap.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_ap_validation():
-    """Test if valid number"""
+def test_ap_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '030123459'
     assert ap.check(valid_number)
@@ -239,25 +219,20 @@ def test_ce_validation_digit_verification():
     invalid_number = '060000014'
     assert ce.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_ce_validation():
-    """Test if valid number"""
+def test_ce_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '060000015'
     assert ce.check(valid_number)
 
-# DISTRITO FEDERAL
 
+#DISTRITO FEDERAL
 def test_df_validation_right_size_invalid_number_star_with_07():
     """Test if a invalid number is really invalid. The state registration must start with 07"""
 
     invalid_number = '063000100195'
     assert df.check(invalid_number) == False
 
-#REFATORAR
-#ESSE TESTE É IGUAL AO ANTERIOR? A ASSINATURA ESTÁ IGUAL
 def test_df_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid. The number start 07"""
 
@@ -294,38 +269,34 @@ def test_es_validation_small_size_number():
     invalid_number = '0172030'
     assert es.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_es_validation_invalid_digit_verification 
-def test_es_validation_digit_verification():
+def test_es_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '999999991'
     assert es.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_es_validation():
-    """Test if valid number"""
+def test_es_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '999999990'
     assert es.check(valid_number)
 
-
 #GOIAS
-def test_go_validation_right_size_invalid_number_():
+def test_go_validation_invalid_number_different_starting_of_10_11_15():
     """Test if the first two digits are different from 10,11,15"""
+
     invalid_number = '135236987'
     assert go.check(invalid_number) == False
 
 def test_go_validation_right_size_invalid_number():
     """Test if a invalid number is really invalid"""
+
     invalid_number = '113636921'
     assert go.check(invalid_number) == False
 
 def test_go_validation_right_size_valid_number_not_in_interval_10103105_the_10119997():
     """Test if a valid number is really valid rest = 1 and number not be in interval (10103105, 10119997)"""
+
     valid_number = '113636920'
     assert go.check(valid_number) == True
 
@@ -351,7 +322,6 @@ def test_go_validation_big_size_number():
     invalid_number = '1011999611'
     assert go.check(invalid_number) == False
 
-
 #MARANHÃO
 def test_ma_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
@@ -371,20 +341,14 @@ def test_ma_validation_start_different_12():
     invalid_number = '172030964'
     assert ma.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_ma_validation_invalid_digit_verification 
-def test_ma_validation_digit_verification():
+def test_ma_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '120000387'
     assert ma.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_ma_validation():
-    """Test if valid number"""
+def test_ma_validation_valid_digit_verification():
+    """Test if a valid number is really valid"""
 
     valid_number = '120000385'
     assert ma.check(valid_number)
@@ -433,25 +397,19 @@ def test_ms_validation_start_different_28():
     invalid_number = '172030964'
     assert ms.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_ms_validation_invalid_digit_verification 
-def test_ms_validation_digit_verification():
-    """Test if digit verification is invalid"""
+def test_ms_validation_invalid_digit_verification():
+    """Test if invalid digit verification is really invalid"""
 
     invalid_number = '280000008'
     assert ms.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_ms_validation():
-    """Test if valid number"""
+def test_ms_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '280000006'
-    assert ms.check(valid_number)
+    assert ms.check(valid_number) == True
 
-# MINAS GERAIS
+#MINAS GERAIS
 def test_mg_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -495,20 +453,14 @@ def test_pa_validation_start_different_15():
     invalid_number = '172030964'
     assert pa.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_pa_validation_invalid_digit_verification 
-def test_pa_validation_digit_verification():
+def test_pa_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '159999990'
     assert pa.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_pa_validation():
-    """Test if valid number"""
+def test_pa_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '159999995'
     assert pa.check(valid_number)
@@ -551,20 +503,14 @@ def test_pe_validation_small_size_number():
     invalid_number = '1572030'
     assert pe.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_pe_validation_invalid_digit_verification 
-def test_pe_validation_digit_verification():
+def test_pe_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '032141830'
     assert pe.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_pe_validation():
-    """Test if valid number"""
+def test_pe_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '032141840'
     assert pe.check(valid_number)
@@ -582,20 +528,14 @@ def test_pi_validation_small_size_number():
     invalid_number = '1572030'
     assert pi.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_pi_validation_invalid_digit_verification 
-def test_pi_validation_digit_verification():
+def test_pi_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '012345670'
     assert pi.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_pi_validation():
-    """Test if valid number"""
+def test_pi_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '012345679'
     assert pi.check(valid_number)
@@ -613,28 +553,19 @@ def test_pr_validation_small_size_number():
     invalid_number = '1572030'
     assert pr.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_pr_validation_invalid_digit_verification 
-def test_pr_validation_digit_verification():
+def test_pr_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '1234567857'
     assert pr.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_pr_validation():
-    """Test if valid number"""
+def test_pr_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '1234567850'
     assert pr.check(valid_number)
 
 #RIO DE JANEIRO
-
-#REFATORAR - CADE O TESTE COM O TAMANHO CERTO, MAS COM NUMERO VALIDO?
-#É O 'VALIDATION'?
 def test_rj_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -647,27 +578,18 @@ def test_rj_validation_small_size_number():
     invalid_number = '1572030'
     assert rj.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_rj_validation_invalid_digit_verification 
-def test_rj_validation_digit_verification():
+def test_rj_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '10022001'
     assert rj.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_rj_validation():
-    """Test if valid number"""
+def test_rj_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '10022002'
     assert rj.check(valid_number)
 
-#RIO GRANDE DO NORTE
-#REFATORAR - CADE O TESTE COM O TAMANHO CERTO, MAS COM NUMERO VALIDO?
-#É O 'VALIDATION'?
 def test_rn_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -680,69 +602,51 @@ def test_rn_validation_small_size_number():
     invalid_number = '207030'
     assert rn.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_rn_validation_invalid_digit_verification 
-def test_rn_validation_digit_verification():
+def ttest_rn_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '200400405'
     assert rn.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_rn_validation():
-    """Test if valid number"""
+def test_rn_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '200400401'
     assert rn.check(valid_number)
 
 #RONDÔNIA
-
 def test_ro_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
     invalid_number = '201728030964577'
     assert ro.check(invalid_number) == False
 
-#REFATORAR - TEM NUMERO VALIDO COM TAMANHO PEQUENO?
 def test_ro_validation_small_size_invalid_number():
     """Test if an invalid number, with wrong size, is really invalid"""
 
     invalid_number = '207030'
     assert ro.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-def test_ro_validation_digit_verification_with_9_digits():
+def test_ro_validation_invalid_digit_verification_with_9_digits():
     """Test if digit verification is invalid"""
 
     invalid_number = '101625218'
     assert ro.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_ro_validation_with_9_digits():
-    """Test if valid number"""
+def test_ro_validation_valid_number_with_9_digits_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '101625213'
     assert ro.check(valid_number)
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-def test_ro_validation_digit_verification_with_14_digits():
-    """Test if digit verification is invalid"""
+def test_ro_validation_invalid_digit_verification_with_14_digits():
+    """Test if invalid digit verification is really invalid"""
 
     invalid_number = '00000000625215'
     assert ro.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_ro_validation_with_14_digits():
-    """Test if valid number"""
+def test_ro_validation_valid_number_with_14_digits_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '00000000625213'
     assert ro.check(valid_number)
@@ -767,26 +671,19 @@ def test_rr_validation_start_different_24():
     invalid_number = '172030964'
     assert rr.check(invalid_number) == False
 
-#REFATORAR
-#ESSA ASSINATURA PODE MELHORAR
-#EX.: test_rr_validation_invalid_digit_verification 
-def test_rr_validation_digit_verification():
+def test_rr_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '240013406'
     assert rr.check(invalid_number) == False
 
-#REFATORAR
-#QUE VALIDACAO? A ASSINATURA DO METODO DEVE SER CLARA PARA O TESTE SER ENTENDIDO
-#SOMENTE POR ELE. O DOCTEST É UMA EXPLICACAO A MAIS
-def test_rr_validation():
-    """Test if valid number"""
+def test_rr_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '240061536'
     assert rr.check(valid_number)
 
 #RIO GRANDE DO SUL
-
 def test_rs_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -799,23 +696,19 @@ def test_rs_validation_small_size_number():
     invalid_number = '247030'
     assert rs.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_rs_validation_digit_verification():
+def test_rs_validation_invalid_digit_verification ():
     """Test if digit verification is invalid"""
 
     invalid_number = '2243658791'
     assert rs.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_rs_validation():
-    """Test if valid number"""
+def test_rs_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '2243658792'
     assert rs.check(valid_number)
 
 #SANTA CATARINA
-#REFATORAR - CADE O TESTE COM O TAMANHO CERTO, MAS COM NUMERO VALIDO?
-#É O 'VALIDATION'?
 def test_sc_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -828,23 +721,19 @@ def test_sc_validation_small_size_number():
     invalid_number = '247030'
     assert sc.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_sc_validation_digit_verification():
+def test_sc_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '251040858'
     assert sc.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_sc_validation():
-    """Test if valid number"""
+def test_sc_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '251040852'
     assert sc.check(valid_number)
 
 #SERGIPE
-#REFATORAR - CADE O TESTE COM O TAMANHO CERTO, MAS COM NUMERO VALIDO?
-#É O 'VALIDATION'?
 def test_se_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -857,23 +746,19 @@ def test_se_validation_small_size_number():
     invalid_number = '247030'
     assert se.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_se_validation_digit_verification():
+def test_se_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '271234566'
     assert se.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_se_validation():
-    """Test if valid number"""
+def test_se_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '271234563'
     assert se.check(valid_number)
 
 #SÃO PAULO
-#REFATORAR - CADE O TESTE COM O TAMANHO CERTO, MAS COM NUMERO VALIDO?
-#É O 'VALIDATION'?
 def test_sp_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -904,24 +789,20 @@ def test_sp_validation_start_different_P_with_13_digits():
     invalid_number = 'U172030964897'
     assert sp.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_sp_validation_with_12_digits():
-    """Test if valid number"""
+def test_sp_validation_valid_number_with_12_digits_is_really_valid():
+    """Test if a valid number with 12 digits is really valid"""
 
     valid_number = '110042490114'
     assert sp.check(valid_number)
 
-#REFATORAR - IDEM ANTERIORES
-def test_sp_validation_with_13_digits():
-    """Test if valid number"""
+def test_sp_validation_valid_number_with_13_digits_is_really_valid():
+    """Test if a valid number with 13 digits is really valid"""
 
     valid_number = 'P011004243002'
     assert sp.check(valid_number)
 
 
 #TOCANTINS
-#REFATORAR - CADE O TESTE COM O TAMANHO CERTO, MAS COM NUMERO VALIDO?
-#É O 'VALIDATION'?
 def test_to_validation_right_size_invalid_number():
     """Test if an invalid number is really invalid"""
 
@@ -934,23 +815,20 @@ def test_to_validation_small_size_number():
     invalid_number = '247030'
     assert to.check(invalid_number) == False
 
-#REFATORAR - ASSINATURA E DOCTESTS ESTAO CONFUSOS
-def test_to_validation_third_and_fourth_digit():
-    """Test if invalid third and fourth digit"""
+def test_to_validation_invalid_number_with_third_and_fourth_digit_different_01_02_03_99():
+    """Test if invalid number with third and fourth digit different of 01, 02, 03 e 99"""
 
     invalid_number = '06087879999'
     assert to.check(invalid_number) == False
 
-#REFATORAR - ASSINATURA E DOCTESTS ESTAO CONFUSOS
-def test_to_validation_digit_verification():
+def test_to_validation_invalid_digit_verification():
     """Test if digit verification is invalid"""
 
     invalid_number = '29010227833'
     assert to.check(invalid_number) == False
 
-#REFATORAR - IDEM ANTERIORES
-def test_to_validation():
-    """Test if valid number"""
+def test_to_validation_valid_number_is_really_valid():
+    """Test if a valid number is really valid"""
 
     valid_number = '29010227836'
     assert to.check(valid_number)
