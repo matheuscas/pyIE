@@ -1,5 +1,10 @@
 # *-* coding:utf-8 *-*
+"""Module states Alagoas"""
+
+
 def check(st_reg_number):
+    """Checks the number valiaty for the Alagoas state"""
+
     if len(st_reg_number) > 9:
         return False
 
@@ -13,12 +18,12 @@ def check(st_reg_number):
         return False
 
     aux = 9
-    sum = 0
+    sum_total = 0
     for i in range(len(st_reg_number)-1):
-        sum = sum + int(st_reg_number[i]) * aux
+        sum_total = sum_total + int(st_reg_number[i]) * aux
         aux -= 1
 
-    product = sum * 10
+    product = sum_total * 10
 
     aux_2 = int(product/11)
 

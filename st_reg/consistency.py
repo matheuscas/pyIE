@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+"""Module de validation the states number"""
+
 import states.ac as ac
 import states.al as al
 import states.am as am
