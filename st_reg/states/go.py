@@ -1,41 +1,39 @@
+# *-* coding:utf-8 *-*
+"""Module states Goais"""
+
+
 def check(st_reg_number):
-	weights = [9, 8, 7, 6, 5, 4, 3, 2]
-	number_state_registration = st_reg_number[0:len(st_reg_number) - 1]
-	digit_state_registration = st_reg_number[-1]
+    """Checks the number valiaty for the Espirito Santo state"""
 
-	
-	if st_reg_number[0:2] not in ['10', '11', '12']:
-		return False
+    weights = [9, 8, 7, 6, 5, 4, 3, 2]
+    number_state_registration = st_reg_number[0:len(st_reg_number) - 1]
+    digit_state_registration = st_reg_number[-1]
 
-	if len(st_reg_number) != 9:
-		return False
+    if st_reg_number[0:2] not in ['10', '11', '12']:
+        return False
 
-	sum = 0
+    if len(st_reg_number) != 9:
+        return False
 
-	for i in weights:
-		sum = sum + i * (int(number_state_registration[-i+1]))
-		
+    sum_total = 0
 
-	if sum % 11 == 0:
+    for i in weights:
+        sum_total = sum_total + i * (int(number_state_registration[-i+1]))
 
-		return '0' == digit_state_registration
+    check_number = number_state_registration <= 10119997
 
-	elif sum % 11 == 1 and (int(number_state_registration) >= 10103105  and number_state_registration <= 10119997):
+    if sum_total % 11 == 0:
+        return '0' == digit_state_registration
 
-		return '1' == digit_state_registration
+    elif sum_total % 11 == 1 and (int(number_state_registration) >= 10103105 and check_number):
+        return '1' == digit_state_registration
 
-	elif sum % 11 == 1:
+    elif sum_total % 11 == 1:
+        return '0' == digit_state_registration
 
-		return '0' == digit_state_registration
+    else:
+        digit_check = 11 - sum_total % 11
+        return digit_state_registration == str(digit_check)
 
-	else:
-
-		digit_check = 11 - sum % 11
-
-		return digit_state_registration == str(digit_check)
-
-	
-
-	if number_state_registration == '11094402' and (number_state_registration == '1' or number_state_registration == '0'):
-		return True
-
+    if number_state_registration == '11094402' and (number_state_registration == '1' or number_state_registration == '0'):
+        return True
