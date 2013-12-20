@@ -3,7 +3,7 @@ Validation of Brazilian States Registrations
 
 Consistency validation of brazilian state registration numbers.
 
-**Current release: 1.0.0**
+**Current release: 1.0.1**
 
 [![Build Status](https://travis-ci.org/matheuscas/br-state_registration.png?branch=master)](https://travis-ci.org/matheuscas/br-state_registration)
 
@@ -58,7 +58,7 @@ Validação da consistência dos números das inscrições estaduais brasileiras
 
 Como utilizar:
 
-**Versão atual: 1.0.0**
+**Versão atual: 1.0.1**
 
 ``` python
 >>>>> from st_reg import consistency
