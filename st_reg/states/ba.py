@@ -66,7 +66,7 @@ def check(st_reg_number):
         for i in weights_first_digit:
 
             sum_first_digit = sum_first_digit + i*int(digit_two[-i+1])
-            print sum_first_digit
+
         first_digits_check = 11 - (sum_first_digit % 11)
 
         if sum_first_digit % 11 == 0 or sum_first_digit % 11 == 1:
