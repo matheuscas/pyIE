@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
 """Module de validation the states number"""
 
-import sys
-
-if sys.version >= '3':
-    import .states.ac as ac
-else:
-    import states.ac as ac    
-
-
+import states.ac as ac    
 import states.al as al
 import states.am as am
 import states.ap as ap
@@ -35,7 +28,6 @@ import states.sc as sc
 import states.sp as sp
 import states.se as se
 import states.to as to
-
 
 def check(st_reg_number, state_index):
     """
