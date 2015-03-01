@@ -3,7 +3,7 @@ Validation of Brazilian States Registrations
 
 Validation of brazilian state registration numbers.
 
-**Current release: 1.0.2**
+**Current release: 1.0.8**
 
 [![Build Status](https://travis-ci.org/matheuscas/pyIE.svg?branch=master)](https://travis-ci.org/matheuscas/pyIE)
 
@@ -75,7 +75,7 @@ pip install ie
 Como utilizar:
 --------------
 
-**Versão atual: 1.0.2**
+**Versão atual: 1.0.8**
 
 ``` python
 >>>>> from ie import checking
