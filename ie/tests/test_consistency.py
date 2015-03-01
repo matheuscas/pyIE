@@ -4,7 +4,7 @@
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
-import st_reg.consistency as con
+import ie.consistency as con
 
 
 def test_acre_call():
