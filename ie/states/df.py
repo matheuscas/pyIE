@@ -40,7 +40,7 @@ def algoritm_df(st_reg_number):
     return str(first_digit) + str(second_digit) == check_digits
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Distrito Federal state"""
 
     if st_reg_number[0:2] != '07':

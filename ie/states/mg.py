@@ -2,7 +2,7 @@
 """Module states Minas Gerais"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Minas Gerais state"""
     #st_reg_number = str(st_reg_number)
     number_state_registration_first_digit = st_reg_number[0:3] + '0' + st_reg_number[3: len(st_reg_number)-2]

@@ -2,7 +2,7 @@
 """Module states Goais"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Espirito Santo state"""
 
     weights = [9, 8, 7, 6, 5, 4, 3, 2]

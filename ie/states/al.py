@@ -2,7 +2,7 @@
 """Module states Alagoas"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Alagoas state"""
 
     if len(st_reg_number) > 9:

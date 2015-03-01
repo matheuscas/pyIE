@@ -2,7 +2,7 @@
 """Module states Bahia"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Bahia state"""
 
     weights_second_digit = range(len(st_reg_number)-1, 1, -1)

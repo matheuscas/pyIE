@@ -2,7 +2,7 @@
 """Module states Maranhão"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Maranhão state"""
     divisor = 11
 

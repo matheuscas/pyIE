@@ -2,7 +2,7 @@
 """Module states Mato Grosso"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Mato Grosso state"""
     #st_reg_number = str(st_reg_number)
     weights = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]

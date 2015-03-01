@@ -2,7 +2,7 @@
 """Module state Sergipe"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Sergipe state"""
     divisor = 11
 

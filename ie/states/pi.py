@@ -2,7 +2,7 @@
 """Module states Pernanbuco"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Piaui state"""
     divisor = 11
 

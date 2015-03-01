@@ -2,7 +2,7 @@
 """Module states Parana"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Parana state"""
     divisor = 11
     weights_first = [3, 2, 7, 6, 5, 4, 3, 2]

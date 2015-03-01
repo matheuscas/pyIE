@@ -2,7 +2,7 @@
 """Module states Mato Grosso do Sul"""
 
 
-def check(st_reg_number):
+def start(st_reg_number):
     """Checks the number valiaty for the Mato Grosso do Sul state"""
 
     divisor = 11

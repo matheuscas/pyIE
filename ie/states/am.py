@@ -1,4 +1,8 @@
-def check (st_reg_number):
+# *-* coding:utf-8 *-*
+"""Amazonas state module"""
+
+
+def start(st_reg_number):
         """Checks the number valiaty for the Amazonas state"""
         weights = range(2, 10)
         digits = st_reg_number[0:len(st_reg_number) - 1]
