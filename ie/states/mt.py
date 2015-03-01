@@ -15,7 +15,6 @@ def start(st_reg_number):
 
     for i in range(0, 10):
         sum = sum + weights[i] * int(st_reg_number[i])
-        print i, st_reg_number[-i], sum
 
     if sum % 11 == 0:
         return digit_state_registration[-1] == '0'
