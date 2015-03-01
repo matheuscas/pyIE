@@ -1,73 +1,88 @@
 Validation of Brazilian States Registrations
 =====================
 
-Consistency validation of brazilian state registration numbers.
+Validation of brazilian state registration numbers.
 
-**Current release: 1.0.1**
+**Current release: 1.0.2**
 
 [![Build Status](https://travis-ci.org/matheuscas/pyIE.svg?branch=master)](https://travis-ci.org/matheuscas/pyIE)
+
+How to install it:
+--------------
+
+``` python
+pip install pyIE
+```
 
 How to use it:
 --------------
 
 ``` python
->>>>> from st_reg import consistency
+>>>>> from ie import checking
 >>>>> acre_state_registration_number = '0172030964575'
->>>>> acre_index_number = 1
->>>>> result = consistency.check(acre_state_registration_number, acre_index_number)
+>>>>> acre_abbreviation = 'AC'
+>>>>> result = checking.start(acre_state_registration_number, acre_abbreviation)
 >>>>> print result
 >>>>> True
 ```
 
-That's it! You just have to pass the number that has to be checked and pass an integer that represents the state. Below you can see the entire index table of the states from Brazil.
+That's it! You just have to pass the state abbreviation and the state number registration. Below you can see the entire states abbreviation table from Brazil.
 
 ``` python
-1 => AC (Acre)
-2 => AL (Alagoas)
-3 => AM (Amazonas)
-4 => AP (Amapa)
-5 => BA (Bahia)
-6 => CE (Ceara)
-7 => DF (Distrito Federal)
-8 => ES (Espirito Santo)
-9 => GO (Goias)
-10 => MA (Maranhao)
-11 => MG (Minas Gerais)
-12 => MS (Mato Grosso do Sul)
-13 => MT (Mato Grosso)
-14 => PA (Para)
-15 => PB (Paraiba)
-16 => PE (Pernambuco)
-17 => PI (Piaui)
-18 => PR (Parana)
-19 => RJ (Rio de Janeiro)
-20 => RN (Rio Grande do Norte)
-21 => RO (Rondonia)
-22 => RR (Roraima)
-23 => RS (Rio Grande do Sul)
-24 => SC (Santa Catarina)
-25 => SE (Sergipe)
-26 => SP (Sao Paulo)
-27 => TO (Tocantins)  
+AC (Acre)
+AL (Alagoas)
+AM (Amazonas)
+AP (Amapa)
+BA (Bahia)
+CE (Ceara)
+DF (Distrito Federal)
+ES (Espirito Santo)
+GO (Goias)
+MA (Maranhao)
+MG (Minas Gerais)
+MS (Mato Grosso do Sul)
+MT (Mato Grosso)
+PA (Para)
+PB (Paraiba)
+PE (Pernambuco)
+PI (Piaui)
+PR (Parana)
+RJ (Rio de Janeiro)
+RN (Rio Grande do Norte)
+RO (Rondonia)
+RR (Roraima)
+RS (Rio Grande do Sul)
+SC (Santa Catarina)
+SE (Sergipe)
+SP (Sao Paulo)
+TO (Tocantins)  
 ```
 
 Portuguese
 --------------
 
-Validação da consistência dos números das inscrições estaduais brasileiras
+Validação das inscrições estaduais de todos os estados brasileiros.
 
-Como utilizar:
-
-**Versão atual: 1.0.1**
+Como instalar:
+--------------
 
 ``` python
->>>>> from st_reg import consistency
+pip install pyIE
+```
+
+Como utilizar:
+--------------
+
+**Versão atual: 1.0.2**
+
+``` python
+>>>>> from ie import checking
 >>>>> alagoas_state_registration_number = '1720309645'
->>>>> alagoas_index_number = 2
->>>>> result = consistency.check(alagoas_state_registration_number, alagoas_index_number)
+>>>>> alagoas_abbreviation = 'AL'
+>>>>> result = checking.start(alagoas_state_registration_number, alagoas_abbreviation)
 >>>>> print result
 >>>>> False
 ```
-É isso! Você apenas tem que passar o número que tem que ser verificado e passar um inteiro que representa o Estado. Acima você pode ver a tabela de índice inteiro dos estados do Brasil.
+É isso! Você apenas tem que passar o número que tem que ser verificado e a sigla do Estado. Acima você pode ver a tabela de siglas dos estados do Brasil.
 
 
