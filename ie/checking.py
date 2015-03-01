@@ -1,33 +1,37 @@
 # -*- coding: utf-8 -*-
 """Module de validation the states number"""
 
-import states.ac as ac    
-import states.al as al
-import states.am as am
-import states.ap as ap
-import states.ba as ba
-import states.ce as ce
-import states.df as df
-import states.es as es
-import states.go as go
-import states.ma as ma
-import states.mt as mt
-import states.ms as ms
-import states.mg as mg
-import states.pa as pa
-import states.pb as pb
-import states.pe as pe
-import states.pr as pr
-import states.pi as pi
-import states.rj as rj
-import states.rn as rn
-import states.rs as rs
-import states.ro as ro
-import states.rr as rr
-import states.sc as sc
-import states.sp as sp
-import states.se as se
-import states.to as to
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
+
+import ie.states.ac as ac    
+import ie.states.al as al
+import ie.states.am as am
+import ie.states.ap as ap
+import ie.states.ba as ba
+import ie.states.ce as ce
+import ie.states.df as df
+import ie.states.es as es
+import ie.states.go as go
+import ie.states.ma as ma
+import ie.states.mt as mt
+import ie.states.ms as ms
+import ie.states.mg as mg
+import ie.states.pa as pa
+import ie.states.pb as pb
+import ie.states.pe as pe
+import ie.states.pr as pr
+import ie.states.pi as pi
+import ie.states.rj as rj
+import ie.states.rn as rn
+import ie.states.rs as rs
+import ie.states.ro as ro
+import ie.states.rr as rr
+import ie.states.sc as sc
+import ie.states.sp as sp
+import ie.states.se as se
+import ie.states.to as to
 
 def start(state_registration_number, state_abbreviation):
     """
