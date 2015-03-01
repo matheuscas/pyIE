@@ -7,13 +7,6 @@ Validation of brazilian state registration numbers.
 
 [![Build Status](https://travis-ci.org/matheuscas/pyIE.svg?branch=master)](https://travis-ci.org/matheuscas/pyIE)
 
-How to install it:
---------------
-
-``` python
-pip install pyIE
-```
-
 How to use it:
 --------------
 
@@ -63,12 +56,6 @@ Portuguese
 
 Validação das inscrições estaduais de todos os estados brasileiros.
 
-Como instalar:
---------------
-
-``` python
-pip install pyIE
-```
 
 Como utilizar:
 --------------
