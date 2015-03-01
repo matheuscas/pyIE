@@ -5,33 +5,33 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 
-import ie.states.ac as ac    
-import ie.states.al as al
-import ie.states.am as am
-import ie.states.ap as ap
-import ie.states.ba as ba
-import ie.states.ce as ce
-import ie.states.df as df
-import ie.states.es as es
-import ie.states.go as go
-import ie.states.ma as ma
-import ie.states.mt as mt
-import ie.states.ms as ms
-import ie.states.mg as mg
-import ie.states.pa as pa
-import ie.states.pb as pb
-import ie.states.pe as pe
-import ie.states.pr as pr
-import ie.states.pi as pi
-import ie.states.rj as rj
-import ie.states.rn as rn
-import ie.states.rs as rs
-import ie.states.ro as ro
-import ie.states.rr as rr
-import ie.states.sc as sc
-import ie.states.sp as sp
-import ie.states.se as se
-import ie.states.to as to
+import ac    
+import al
+import am
+import ap
+import ba
+import ce
+import df
+import es
+import go
+import ma
+import mt
+import ms
+import mg
+import pa
+import pb
+import pe
+import pr
+import pi
+import rj
+import rn
+import rs
+import ro
+import rr
+import sc
+import sp
+import se
+import to
 
 def start(state_registration_number, state_abbreviation):
     """

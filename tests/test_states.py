@@ -1,37 +1,37 @@
 # -*- coding: utf-8 -*-
 """File to test states validations"""
 
-import os
-import sys
-sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
+# import os
+# import sys
+# sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 
-import ie.states.ac as ac
-import ie.states.al as al
-import ie.states.am as am
-import ie.states.ap as ap
-import ie.states.ba as ba
-import ie.states.ce as ce
-import ie.states.df as df
-import ie.states.es as es
-import ie.states.go as go
-import ie.states.ma as ma
-import ie.states.mt as mt
-import ie.states.ms as ms
-import ie.states.mg as mg
-import ie.states.pa as pa
-import ie.states.pe as pe
-import ie.states.pr as pr
-import ie.states.pb as pb
-import ie.states.pi as pi
-import ie.states.rj as rj
-import ie.states.rn as rn
-import ie.states.rs as rs
-import ie.states.ro as ro
-import ie.states.rr as rr
-import ie.states.sc as sc
-import ie.states.sp as sp
-import ie.states.se as se
-import ie.states.to as to
+import ie.ac as ac
+import ie.al as al
+import ie.am as am
+import ie.ap as ap
+import ie.ba as ba
+import ie.ce as ce
+import ie.df as df
+import ie.es as es
+import ie.go as go
+import ie.ma as ma
+import ie.mt as mt
+import ie.ms as ms
+import ie.mg as mg
+import ie.pa as pa
+import ie.pe as pe
+import ie.pr as pr
+import ie.pb as pb
+import ie.pi as pi
+import ie.rj as rj
+import ie.rn as rn
+import ie.rs as rs
+import ie.ro as ro
+import ie.rr as rr
+import ie.sc as sc
+import ie.sp as sp
+import ie.se as se
+import ie.to as to
 
 
 #ACRE
