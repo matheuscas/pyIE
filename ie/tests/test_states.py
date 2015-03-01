@@ -5,33 +5,33 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 
-import st_reg.states.ac as ac
-import st_reg.states.al as al
-import st_reg.states.am as am
-import st_reg.states.ap as ap
-import st_reg.states.ba as ba
-import st_reg.states.ce as ce
-import st_reg.states.df as df
-import st_reg.states.es as es
-import st_reg.states.go as go
-import st_reg.states.ma as ma
-import st_reg.states.mt as mt
-import st_reg.states.ms as ms
-import st_reg.states.mg as mg
-import st_reg.states.pa as pa
-import st_reg.states.pe as pe
-import st_reg.states.pr as pr
-import st_reg.states.pb as pb
-import st_reg.states.pi as pi
-import st_reg.states.rj as rj
-import st_reg.states.rn as rn
-import st_reg.states.rs as rs
-import st_reg.states.ro as ro
-import st_reg.states.rr as rr
-import st_reg.states.sc as sc
-import st_reg.states.sp as sp
-import st_reg.states.se as se
-import st_reg.states.to as to
+import ie.states.ac as ac
+import ie.states.al as al
+import ie.states.am as am
+import ie.states.ap as ap
+import ie.states.ba as ba
+import ie.states.ce as ce
+import ie.states.df as df
+import ie.states.es as es
+import ie.states.go as go
+import ie.states.ma as ma
+import ie.states.mt as mt
+import ie.states.ms as ms
+import ie.states.mg as mg
+import ie.states.pa as pa
+import ie.states.pe as pe
+import ie.states.pr as pr
+import ie.states.pb as pb
+import ie.states.pi as pi
+import ie.states.rj as rj
+import ie.states.rn as rn
+import ie.states.rs as rs
+import ie.states.ro as ro
+import ie.states.rr as rr
+import ie.states.sc as sc
+import ie.states.sp as sp
+import ie.states.se as se
+import ie.states.to as to
 
 
 #ACRE
