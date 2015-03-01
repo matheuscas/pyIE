@@ -29,73 +29,74 @@ import states.sp as sp
 import states.se as se
 import states.to as to
 
-def check(state_registration_number, state_index):
+def check(state_registration_number, state_abbreviation):
     """
         This function is like a Facade to another modules that
         makes their own state validation.
 
         state_registration_number - string brazilian state registration number
-        state_index  - integer index that references the state
+        state_abbreviation  - state abbreviation
 
-        1 => AC (Acre)
-        2 => AL (Alagoas)
-        3 => AM (Amazonas)
-        4 => AP (Amapá)
-        5 => BA (Bahia)
-        6 => CE (Ceará)
-        7 => DF (Distrito Federal)
-        8 => ES (Espírito Santo')
-        9 => GO (Goias)
-        10 => MA (Maranhão)
-        11 => MG (Minas Gerais)
-        12 => MS (Mato Grosso do Sul)
-        13 => MT (Mato Grosso)
-        14 => PA (Pará)
-        15 => PB (Paraíba)
-        16 => PE (Pernambuco)
-        17 => PI (Piauí)
-        18 => PR (Paraná)
-        19 => RJ (Rio de Janeiro)
-        20 => RN (Rio Grande do Norte)
-        21 => RO (Rondônia)
-        22 => RR (Roraima)
-        23 => RS (Rio Grande do Sul)
-        24 => SC (Santa Catarina)
-        25 => SE (Sergipe)
-        26 => SP (São Paulo)
-        27 => TO (Tocantins)
+        AC (Acre)
+        AL (Alagoas)
+        AM (Amazonas)
+        AP (Amapá)
+        BA (Bahia)
+        CE (Ceará)
+        DF (Distrito Federal)
+        ES (Espírito Santo')
+        GO (Goias)
+        MA (Maranhão)
+        MG (Minas Gerais)
+        MS (Mato Grosso do Sul)
+        MT (Mato Grosso)
+        PA (Pará)
+        PB (Paraíba)
+        PE (Pernambuco)
+        PI (Piauí)
+        PR (Paraná)
+        RJ (Rio de Janeiro)
+        RN (Rio Grande do Norte)
+        RO (Rondônia)
+        RR (Roraima)
+        RS (Rio Grande do Sul)
+        SC (Santa Catarina)
+        SE (Sergipe)
+        SP (São Paulo)
+        TO (Tocantins)
     """
 
+    state_abbreviation = state_abbreviation.upper()
     states_validations = {
-        1: "ac.check(" + "\"" + state_registration_number + "\"" + ")",
-        2: "al.check(" + "\"" + state_registration_number + "\"" + ")",
-        3: "am.check(" + "\"" + state_registration_number + "\"" + ")",
-        4: "ap.check(" + "\"" + state_registration_number + "\"" + ")",
-        5: "ba.check(" + "\"" + state_registration_number + "\"" + ")",
-        6: "ce.check(" + "\"" + state_registration_number + "\"" + ")",
-        7: "df.check(" + "\"" + state_registration_number + "\"" + ")",
-        8: "es.check(" + "\"" + state_registration_number + "\"" + ")",
-        9: "go.check(" + "\"" + state_registration_number + "\"" + ")",
-        10: "ma.check(" + "\"" + state_registration_number + "\"" + ")",
-        11: "mg.check(" + "\"" + state_registration_number + "\"" + ")",
-        12: "ms.check(" + "\"" + state_registration_number + "\"" + ")",
-        13: "mt.check(" + "\"" + state_registration_number + "\"" + ")",
-        14: "pa.check(" + "\"" + state_registration_number + "\"" + ")",
-        15: "pb.check(" + "\"" + state_registration_number + "\"" + ")",
-        16: "pe.check(" + "\"" + state_registration_number + "\"" + ")",
-        17: "pi.check(" + "\"" + state_registration_number + "\"" + ")",
-        18: "pr.check(" + "\"" + state_registration_number + "\"" + ")",
-        19: "rj.check(" + "\"" + state_registration_number + "\"" + ")",
-        20: "rn.check(" + "\"" + state_registration_number + "\"" + ")",
-        21: "ro.check(" + "\"" + state_registration_number + "\"" + ")",
-        22: "rr.check(" + "\"" + state_registration_number + "\"" + ")",
-        23: "rs.check(" + "\"" + state_registration_number + "\"" + ")",
-        24: "sc.check(" + "\"" + state_registration_number + "\"" + ")",
-        25: "se.check(" + "\"" + state_registration_number + "\"" + ")",
-        26: "sp.check(" + "\"" + state_registration_number + "\"" + ")",
-        27: "to.check(" + "\"" + state_registration_number + "\"" + ")"
+        'AC': "ac.check(" + "\"" + state_registration_number + "\"" + ")",
+        'AL': "al.check(" + "\"" + state_registration_number + "\"" + ")",
+        'AM': "am.check(" + "\"" + state_registration_number + "\"" + ")",
+        'AP': "ap.check(" + "\"" + state_registration_number + "\"" + ")",
+        'BA': "ba.check(" + "\"" + state_registration_number + "\"" + ")",
+        'CE': "ce.check(" + "\"" + state_registration_number + "\"" + ")",
+        'DF': "df.check(" + "\"" + state_registration_number + "\"" + ")",
+        'ES': "es.check(" + "\"" + state_registration_number + "\"" + ")",
+        'GO': "go.check(" + "\"" + state_registration_number + "\"" + ")",
+        'MA': "ma.check(" + "\"" + state_registration_number + "\"" + ")",
+        'MG': "mg.check(" + "\"" + state_registration_number + "\"" + ")",
+        'MS': "ms.check(" + "\"" + state_registration_number + "\"" + ")",
+        'MT': "mt.check(" + "\"" + state_registration_number + "\"" + ")",
+        'PA': "pa.check(" + "\"" + state_registration_number + "\"" + ")",
+        'PB': "pb.check(" + "\"" + state_registration_number + "\"" + ")",
+        'PE': "pe.check(" + "\"" + state_registration_number + "\"" + ")",
+        'PI': "pi.check(" + "\"" + state_registration_number + "\"" + ")",
+        'PR': "pr.check(" + "\"" + state_registration_number + "\"" + ")",
+        'RJ': "rj.check(" + "\"" + state_registration_number + "\"" + ")",
+        'RN': "rn.check(" + "\"" + state_registration_number + "\"" + ")",
+        'RO': "ro.check(" + "\"" + state_registration_number + "\"" + ")",
+        'RR': "rr.check(" + "\"" + state_registration_number + "\"" + ")",
+        'RS': "rs.check(" + "\"" + state_registration_number + "\"" + ")",
+        'SC': "sc.check(" + "\"" + state_registration_number + "\"" + ")",
+        'SE': "se.check(" + "\"" + state_registration_number + "\"" + ")",
+        'SP': "sp.check(" + "\"" + state_registration_number + "\"" + ")",
+        'TO': "to.check(" + "\"" + state_registration_number + "\"" + ")"
 
     }
 
-    exec('validity = ' + states_validations[state_index])
+    exec('validity = ' + states_validations[state_abbreviation])
     return validity
