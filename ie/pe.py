@@ -32,7 +32,7 @@ def start(st_reg_number):
     mult = 10000000
     for i in range(len(st_reg_number)-2):
         num = num + int(st_reg_number[i]) * mult
-        mult = mult/10
+        mult = mult // 10
 
     num = num + digit_first
 

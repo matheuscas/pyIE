@@ -20,7 +20,7 @@ def start(st_reg_number):
     for i in weights:
         sum_total = sum_total + i * (int(number_state_registration[-i+1]))
 
-    check_number = number_state_registration <= 10119997
+    check_number = int(number_state_registration) <= 10119997
 
     if sum_total % 11 == 0:
         return '0' == digit_state_registration

@@ -5,33 +5,36 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 
-import ac    
-import al
-import am
-import ap
-import ba
-import ce
-import df
-import es
-import go
-import ma
-import mt
-import ms
-import mg
-import pa
-import pb
-import pe
-import pr
-import pi
-import rj
-import rn
-import rs
-import ro
-import rr
-import sc
-import sp
-import se
-import to
+from ie import (  # noqa
+    ac,
+    al,
+    am,
+    ap,
+    ba,
+    ce,
+    df,
+    es,
+    go,
+    ma,
+    mt,
+    ms,
+    mg,
+    pa,
+    pb,
+    pe,
+    pi,
+    pr,
+    rj,
+    rn,
+    rs,
+    ro,
+    rr,
+    sc,
+    sp,
+    se,
+    to
+)
+
 
 def start(state_registration_number, state_abbreviation):
     """
@@ -102,5 +105,4 @@ def start(state_registration_number, state_abbreviation):
 
     }
 
-    exec('validity = ' + states_validations[state_abbreviation])
-    return validity
+    return eval(states_validations[state_abbreviation])

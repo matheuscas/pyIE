@@ -3,7 +3,6 @@ astroid==1.0.1
 coverage==3.7.1
 logilab-common==0.60.1
 pep8==1.4.6
-py==1.4.19
+py==1.8.0
 pylint==1.0.0
-pytest==2.5.0
-wsgiref==0.1.2
+pytest==4.6.6
