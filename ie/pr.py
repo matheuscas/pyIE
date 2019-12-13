@@ -28,7 +28,7 @@ def start(st_reg_number):
     mult = 100000000
     for i in range(len(st_reg_number)-2):
         num = num + int(st_reg_number[i]) * mult
-        mult = mult/10
+        mult = mult // 10
 
     num = num + digit_first
 
@@ -46,7 +46,7 @@ def start(st_reg_number):
 
     if digit_secund == 10 or digit_secund == 11:
         digit_secund = 0
-        
+
     digit_first_check = digit_first == int(st_reg_number[len(st_reg_number)-2])
 
     if digit_secund == int(st_reg_number[len(st_reg_number)-1]) and digit_first_check:

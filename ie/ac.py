@@ -4,7 +4,7 @@
 def start(st_reg_number):
     """Checks the number valiaty for the Acre state"""
 
-    #st_reg_number = str(st_reg_number)
+    # st_reg_number = str(st_reg_number)
     weights = [4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
     digits = st_reg_number[:len(st_reg_number) - 2]
     check_digits = st_reg_number[-2:]

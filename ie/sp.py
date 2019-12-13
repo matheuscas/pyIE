@@ -4,7 +4,6 @@
 
 def start(st_reg_number):
     """Checks the number valiaty for the São Paulo state"""
-
     divisor = 11
 
     verificador_one = int(st_reg_number[len(st_reg_number)-4])
@@ -31,12 +30,13 @@ def start(st_reg_number):
 
         num = 0
         mult = 10000000000
+
         for i in range(len(st_reg_number)-1):
             if i == 8:
                 num = num + digit_first * mult
             else:
                 num = num + int(st_reg_number[i]) * mult
-            mult = mult/10
+            mult = mult // 10
 
         if num < 10000000000:
             new_st = str('0') + str(num)
