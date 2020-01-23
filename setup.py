@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='ie',
-      version='1.0.8',
+      version='2.0.0',
       description='Validation of brazilian state registration numbers',
       classifiers=[
           'Development Status :: 5 - Production/Stable',
