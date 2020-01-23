@@ -6,3 +6,4 @@ pep8==1.4.6
 py==1.8.0
 pylint==1.0.0
 pytest==4.6.6
+tox
