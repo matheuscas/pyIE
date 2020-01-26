@@ -6,6 +6,7 @@ Validation of brazilian state registration numbers.
 **Current release: 1.0.8**
 
 [![Build Status](https://travis-ci.org/matheuscas/pyIE.svg?branch=master)](https://travis-ci.org/matheuscas/pyIE)
+![](https://img.shields.io/pypi/pyversions/ie?style=flat-square)
 
 How to install it:
 --------------
